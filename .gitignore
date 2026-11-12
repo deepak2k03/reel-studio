@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+.venv/
+
+# Remotion build & cache
+.remotion/
+build/
+dist/
+
+# Rendered output videos (keep directory, ignore heavy exports)
+out/*.mp4
+out/*.mov
+out/*.webm
+out/*.png
+
+# Reference media caches & extracted frames
+references/*/frames/
+references/*/*.mp4
+references/*/*.mov
+references/*/*.wav
+
+# Web app project data & uploads
+data/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.log
+

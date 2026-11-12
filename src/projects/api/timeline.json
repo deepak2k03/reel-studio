@@ -1,0 +1,181 @@
+{
+  "slug": "api",
+  "fps": 60,
+  "width": 1080,
+  "height": 1920,
+  "audioFile": "projects/api/voice.wav",
+  "theme": "midnight-dev",
+  "scenes": [
+    {
+      "id": "scene-1",
+      "type": "concept-card",
+      "start": 0.0,
+      "end": 3.82,
+      "title": "Beat 1",
+      "subtitle": "\u0928\u092e\u0938\u094d\u0924\u0947, \u0906\u091c \u0939\u092e \u090f\u0915 \u092e\u093f\u0928\u0947\u091f \u092e\u0947\u0902 \u0938\u092e\u091d\u0947\u0902\u0917\u0947 \u0915\u0940 API \u0915\u094d\u092f\u093e \u0939\u094b\u0924\u0940 \u0939\u0948?",
+      "sfx": "whoosh"
+    },
+    {
+      "id": "scene-2",
+      "type": "concept-card",
+      "start": 4.3,
+      "end": 7.46,
+      "title": "Beat 2",
+      "subtitle": "API \u0915\u0947 full form \u0939\u0948, application programming interface.",
+      "sfx": "pop"
+    },
+    {
+      "id": "scene-3",
+      "type": "concept-card",
+      "start": 8.14,
+      "end": 10.82,
+      "title": "Beat 3",
+      "subtitle": "\u0907\u0938\u0947 \u0938\u092e\u091c\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u090f\u0915 restaurant \u0915\u093e \u090f\u0915\u091c\u093e\u092e\u092a\u0932 \u0932\u0947\u0924\u0947 \u0939\u0948\u0902.",
+      "sfx": "pop"
+    },
+    {
+      "id": "scene-4",
+      "type": "concept-card",
+      "start": 11.2,
+      "end": 13.98,
+      "title": "Beat 4",
+      "subtitle": "\u092e\u093e\u0928 \u0932\u093f\u091c\u0947 \u0906\u092a \u090f\u0915 restaurant \u092e\u0947\u0902 table \u092a\u0930 \u092c\u0947\u091f \u0939\u0948\u0902",
+      "sfx": "pop"
+    },
+    {
+      "id": "scene-5",
+      "type": "concept-card",
+      "start": 13.98,
+      "end": 15.72,
+      "title": "Beat 5",
+      "subtitle": "\u0914\u0930 kitchen \u092e\u0947\u0902 \u0916\u093e\u0928\u093e \u092c\u0928 \u0930\u0939\u093e \u0939\u0948.",
+      "sfx": "pop"
+    },
+    {
+      "id": "scene-6",
+      "type": "concept-card",
+      "start": 16.14,
+      "end": 18.56,
+      "title": "Beat 6",
+      "subtitle": "\u0906\u092a \u0938\u0940\u0921\u0947 kitchen \u092e\u0947\u0902 \u091c\u093e\u0915\u0930 chef \u0915\u094b order \u0928\u0939\u0940\u0902 \u0926\u0947\u0924\u0947.",
+      "sfx": "pop"
+    },
+    {
+      "id": "scene-7",
+      "type": "concept-card",
+      "start": 18.56,
+      "end": 23.24,
+      "title": "Beat 7",
+      "subtitle": "\u0905\u092a\u0915\u0940 \u090f\u0915 waiter \u0906\u0924\u093e \u0939\u0948, \u0906\u092a\u0915\u093e order \u0932\u0947\u0924\u093e \u0939\u0948, kitchen \u092e\u0947\u0902 chef \u0915\u094b \u092c\u0924\u093e\u0924\u093e \u0939\u0948,",
+      "sfx": "pop"
+    },
+    {
+      "id": "scene-8",
+      "type": "concept-card",
+      "start": 23.64,
+      "end": 26.34,
+      "title": "Beat 8",
+      "subtitle": "\u0914\u0930 \u092b\u093f\u0930 \u0916\u093e\u0928\u093e \u092c\u0928\u0928\u0947 \u0915\u0947 \u092c\u093e\u0921 \u0906\u092a\u0915\u0940 table \u092a\u0930 \u0932\u093e\u0915\u0930 \u0926\u0947\u0924\u093e \u0939\u0948.",
+      "sfx": "pop"
+    },
+    {
+      "id": "scene-9",
+      "type": "concept-card",
+      "start": 26.94,
+      "end": 31.02,
+      "title": "Beat 9",
+      "subtitle": "\u0924\u0947\u0915\u0928\u094b\u0932\u094b\u0917\u0940 \u0915\u0940 \u0926\u0941\u0928\u094d\u092f\u093e \u092e\u0947\u0902 API \u092c\u093f\u0932\u0915\u0941\u0932 \u0907\u0938\u0940 waiter \u0915\u0940 \u0924\u0930\u0939 \u0915\u093e\u092e \u0915\u0930\u0924\u0940 \u0939\u0948.",
+      "sfx": "pop"
+    },
+    {
+      "id": "scene-10",
+      "type": "concept-card",
+      "start": 31.44,
+      "end": 34.98,
+      "title": "Beat 10",
+      "subtitle": "\u091c\u092c \u0906\u092a \u0905\u092a\u0928\u0947 phone \u092a\u0930 \u0915\u094b\u0908 food delivery app \u092f\u093e weather app \u0915\u094b\u0932\u0924\u0947 \u0939\u0948,",
+      "sfx": "pop"
+    },
+    {
+      "id": "scene-11",
+      "type": "concept-card",
+      "start": 34.98,
+      "end": 37.64,
+      "title": "Beat 11",
+      "subtitle": "\u0924\u094b \u0906\u092a\u0915\u093e phone server \u0915\u094b \u090f\u0915 request \u092c\u0947\u0936\u0924\u093e \u0939\u0948,",
+      "sfx": "pop"
+    },
+    {
+      "id": "scene-12",
+      "type": "concept-card",
+      "start": 38.04,
+      "end": 40.8,
+      "title": "Beat 12",
+      "subtitle": "API \u0906\u092a\u0915\u0940 \u0907\u0938 request \u0915\u094b server \u0924\u0915 \u0932\u0947\u091c\u093e\u0924\u0940 \u0939\u0948,",
+      "sfx": "pop"
+    },
+    {
+      "id": "scene-13",
+      "type": "concept-card",
+      "start": 41.2,
+      "end": 43.08,
+      "title": "Beat 13",
+      "subtitle": "\u0935\u0939\u093e\u0902 \u0938\u0947 \u091c\u093c\u0930\u0942\u0930\u0940 data \u0909\u0920\u093e\u0924\u0940 \u0939\u0948,",
+      "sfx": "pop"
+    },
+    {
+      "id": "scene-14",
+      "type": "concept-card",
+      "start": 43.42,
+      "end": 44.82,
+      "title": "Beat 14",
+      "subtitle": "\u0914\u0930 \u0906\u092a\u0915\u0940 screen \u092a\u0930 \u0926\u093f\u0916\u093e\u0924\u0940 \u0939\u0948.",
+      "sfx": "pop"
+    },
+    {
+      "id": "scene-15",
+      "type": "concept-card",
+      "start": 45.18,
+      "end": 46.82,
+      "title": "Beat 15",
+      "subtitle": "\u0906\u0938\u093e\u0928 \u0936\u092c\u094d\u0921\u094b \u092e\u0947\u0902 \u0915\u0939\u0947\u0902 \u0924\u094b,",
+      "sfx": "pop"
+    },
+    {
+      "id": "scene-16",
+      "type": "concept-card",
+      "start": 47.0,
+      "end": 50.56,
+      "title": "Beat 16",
+      "subtitle": "API \u0921\u094b\u0939 \u0905\u0932\u0917 \ufffdalag software \u092f\u093e apps \u0915\u0947 \u092c\u0940\u091a \u092f\u0947 \u092c\u094d\u0930\u093f\u091c,",
+      "sfx": "pop"
+    },
+    {
+      "id": "scene-17",
+      "type": "concept-card",
+      "start": 50.68,
+      "end": 52.08,
+      "title": "Beat 17",
+      "subtitle": "\u092f\u093e \u092a\u0941\u0932 \u0915\u093e \u0915\u093e\u092e \u0915\u0930\u0924\u0940 \u0939\u0948,",
+      "sfx": "pop"
+    },
+    {
+      "id": "scene-18",
+      "type": "concept-card",
+      "start": 52.08,
+      "end": 54.12,
+      "title": "Beat 18",
+      "subtitle": "\u091c\u093f\u0938 \u0938\u0947 \u0935\u094b \u0906\u092a\u0938 \u092e\u0947\u0902 \u092c\u093e\u0924 \u0915\u0930 \u0930\u0939\u093e\u0924\u0947 \u0939\u0948,",
+      "sfx": "pop"
+    },
+    {
+      "id": "scene-19",
+      "type": "concept-card",
+      "start": 54.2,
+      "end": 55.46,
+      "title": "Beat 19",
+      "subtitle": "\u0914\u0930 \u0921\u0947\u091f\u093e \u0936\u0947\u0930 \u0915\u0930 \u0930\u0939\u093e\u0924\u0947 \u0939\u0948.",
+      "sfx": "pop"
+    }
+  ]
+}

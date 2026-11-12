@@ -1,0 +1,113 @@
+{
+  "fps": 60,
+  "duration": 14.0,
+  "durationFrames": 840,
+  "language": "en",
+  "text": "What happens when a hot Redis key expires? Thousands of requests miss the cache at once and slam your database. This is a cache stampede. Fix it with a singleflight lock in Go, so only one request queries Postgres while everyone else shares the result.",
+  "words": [
+    { "id": 0, "word": "What", "start": 0.1, "end": 0.32, "startFrame": 6, "endFrame": 19 },
+    { "id": 1, "word": "happens", "start": 0.34, "end": 0.68, "startFrame": 20, "endFrame": 41 },
+    { "id": 2, "word": "when", "start": 0.7, "end": 0.9, "startFrame": 42, "endFrame": 54 },
+    { "id": 3, "word": "a", "start": 0.92, "end": 1.0, "startFrame": 55, "endFrame": 60 },
+    { "id": 4, "word": "hot", "start": 1.02, "end": 1.24, "startFrame": 61, "endFrame": 74 },
+    { "id": 5, "word": "Redis", "start": 1.26, "end": 1.58, "startFrame": 76, "endFrame": 95 },
+    { "id": 6, "word": "key", "start": 1.6, "end": 1.8, "startFrame": 96, "endFrame": 108 },
+    { "id": 7, "word": "expires?", "start": 1.82, "end": 2.32, "startFrame": 109, "endFrame": 139 },
+    { "id": 8, "word": "Thousands", "start": 2.75, "end": 3.2, "startFrame": 165, "endFrame": 192 },
+    { "id": 9, "word": "of", "start": 3.22, "end": 3.34, "startFrame": 193, "endFrame": 200 },
+    { "id": 10, "word": "requests", "start": 3.36, "end": 3.82, "startFrame": 202, "endFrame": 229 },
+    { "id": 11, "word": "miss", "start": 3.85, "end": 4.08, "startFrame": 231, "endFrame": 245 },
+    { "id": 12, "word": "the", "start": 4.1, "end": 4.22, "startFrame": 246, "endFrame": 253 },
+    { "id": 13, "word": "cache", "start": 4.24, "end": 4.56, "startFrame": 254, "endFrame": 274 },
+    { "id": 14, "word": "at", "start": 4.58, "end": 4.72, "startFrame": 275, "endFrame": 283 },
+    { "id": 15, "word": "once", "start": 4.74, "end": 5.04, "startFrame": 284, "endFrame": 302 },
+    { "id": 16, "word": "and", "start": 5.06, "end": 5.2, "startFrame": 304, "endFrame": 312 },
+    { "id": 17, "word": "slam", "start": 5.22, "end": 5.56, "startFrame": 313, "endFrame": 334 },
+    { "id": 18, "word": "your", "start": 5.58, "end": 5.76, "startFrame": 335, "endFrame": 346 },
+    { "id": 19, "word": "database.", "start": 5.78, "end": 6.32, "startFrame": 347, "endFrame": 379 },
+    { "id": 20, "word": "This", "start": 6.7, "end": 6.92, "startFrame": 402, "endFrame": 415 },
+    { "id": 21, "word": "is", "start": 6.94, "end": 7.06, "startFrame": 416, "endFrame": 424 },
+    { "id": 22, "word": "a", "start": 7.08, "end": 7.16, "startFrame": 425, "endFrame": 430 },
+    { "id": 23, "word": "cache", "start": 7.18, "end": 7.52, "startFrame": 431, "endFrame": 451 },
+    { "id": 24, "word": "stampede.", "start": 7.54, "end": 8.1, "startFrame": 452, "endFrame": 486 },
+    { "id": 25, "word": "Fix", "start": 8.5, "end": 8.76, "startFrame": 510, "endFrame": 526 },
+    { "id": 26, "word": "it", "start": 8.78, "end": 8.9, "startFrame": 527, "endFrame": 534 },
+    { "id": 27, "word": "with", "start": 8.92, "end": 9.1, "startFrame": 535, "endFrame": 546 },
+    { "id": 28, "word": "a", "start": 9.12, "end": 9.2, "startFrame": 547, "endFrame": 552 },
+    { "id": 29, "word": "singleflight", "start": 9.22, "end": 9.88, "startFrame": 553, "endFrame": 593 },
+    { "id": 30, "word": "lock", "start": 9.9, "end": 10.18, "startFrame": 594, "endFrame": 611 },
+    { "id": 31, "word": "in", "start": 10.2, "end": 10.32, "startFrame": 612, "endFrame": 619 },
+    { "id": 32, "word": "Go,", "start": 10.34, "end": 10.64, "startFrame": 620, "endFrame": 638 },
+    { "id": 33, "word": "so", "start": 10.8, "end": 10.98, "startFrame": 648, "endFrame": 659 },
+    { "id": 34, "word": "only", "start": 11.0, "end": 11.28, "startFrame": 660, "endFrame": 677 },
+    { "id": 35, "word": "one", "start": 11.3, "end": 11.52, "startFrame": 678, "endFrame": 691 },
+    { "id": 36, "word": "request", "start": 11.54, "end": 11.96, "startFrame": 692, "endFrame": 718 },
+    { "id": 37, "word": "queries", "start": 11.98, "end": 12.42, "startFrame": 719, "endFrame": 745 },
+    { "id": 38, "word": "Postgres", "start": 12.44, "end": 12.96, "startFrame": 746, "endFrame": 778 },
+    { "id": 39, "word": "while", "start": 12.98, "end": 13.18, "startFrame": 779, "endFrame": 791 },
+    { "id": 40, "word": "everyone", "start": 13.2, "end": 13.5, "startFrame": 792, "endFrame": 810 },
+    { "id": 41, "word": "else", "start": 13.52, "end": 13.68, "startFrame": 811, "endFrame": 821 },
+    { "id": 42, "word": "shares", "start": 13.7, "end": 13.84, "startFrame": 822, "endFrame": 830 },
+    { "id": 43, "word": "the", "start": 13.85, "end": 13.9, "startFrame": 831, "endFrame": 834 },
+    { "id": 44, "word": "result.", "start": 13.91, "end": 14.0, "startFrame": 835, "endFrame": 840 }
+  ],
+  "segments": [
+    {
+      "id": 0,
+      "text": "What happens when a hot Redis key expires?",
+      "start": 0.1,
+      "end": 2.32,
+      "startFrame": 6,
+      "endFrame": 139,
+      "words": []
+    },
+    {
+      "id": 1,
+      "text": "Thousands of requests miss the cache at once and slam your database. This is a cache stampede.",
+      "start": 2.75,
+      "end": 8.1,
+      "startFrame": 165,
+      "endFrame": 486,
+      "words": []
+    },
+    {
+      "id": 2,
+      "text": "Fix it with a singleflight lock in Go, so only one request queries Postgres while everyone else shares the result.",
+      "start": 8.5,
+      "end": 14.0,
+      "startFrame": 510,
+      "endFrame": 840,
+      "words": []
+    }
+  ],
+  "pauses": [
+    {
+      "afterWordId": 7,
+      "afterWord": "expires?",
+      "start": 2.32,
+      "end": 2.75,
+      "duration": 0.43,
+      "startFrame": 139,
+      "endFrame": 165
+    },
+    {
+      "afterWordId": 19,
+      "afterWord": "database.",
+      "start": 6.32,
+      "end": 6.7,
+      "duration": 0.38,
+      "startFrame": 379,
+      "endFrame": 402
+    },
+    {
+      "afterWordId": 24,
+      "afterWord": "stampede.",
+      "start": 8.1,
+      "end": 8.5,
+      "duration": 0.4,
+      "startFrame": 486,
+      "endFrame": 510
+    }
+  ]
+}
+

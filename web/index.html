@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reels Studio</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div>
+          <h1>Reels Studio</h1>
+          <p class="subtitle">Voice + Reference Style Video Generator</p>
+        </div>
+        <span class="pill">60 fps · Local CPU</span>
+      </header>
+
+      <section class="card">
+        <form id="create-form" class="form">
+          <div class="field">
+            <label for="title-input">Project title (optional)</label>
+            <input
+              id="title-input"
+              name="title"
+              type="text"
+              placeholder="e.g., How Redis Caching Works"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="drop-grid">
+            <div class="dropzone" id="voice-zone">
+              <input
+                id="voice-input"
+                name="voice"
+                type="file"
+                accept="audio/*,.wav,.mp3,.m4a,.aac,.ogg,.flac"
+                hidden
+              />
+              <div class="drop-title">Voice Recording <span class="req">*</span></div>
+              <div class="drop-hint" id="voice-label">
+                Drop audio or click to browse (.wav, .mp3, .m4a)
+              </div>
+            </div>
+
+            <div class="dropzone" id="ref-zone">
+              <input
+                id="ref-input"
+                name="reference"
+                type="file"
+                accept="video/*,.mp4,.mov,.webm,.mkv"
+                hidden
+              />
+              <div class="drop-title">Reference Style Video</div>
+              <div class="drop-hint" id="ref-label">
+                Drop clip to match colors &amp; pacing (.mp4, .mov)
+              </div>
+              <button type="button" class="clear-btn hidden" id="ref-clear">Clear</button>
+            </div>
+          </div>
+
+          <div class="controls-row">
+            <div class="inline-select">
+              <label for="mode-select">Workflow</label>
+              <select id="mode-select" name="mode">
+                <option value="supervised" selected>Supervise with Antigravity</option>
+                <option value="auto">Quick Auto Render</option>
+              </select>
+            </div>
+
+            <div class="inline-select">
+              <label for="format-select">Format</label>
+              <select id="format-select" name="format">
+                <option value="portrait" selected>9:16 Reels (1080×1920)</option>
+                <option value="landscape">16:9 Video (1920×1080)</option>
+              </select>
+            </div>
+
+            <div class="inline-select">
+              <label for="lang-select">Speech</label>
+              <select id="lang-select" name="language">
+                <option value="auto" selected>Auto-detect</option>
+                <option value="en">English</option>
+                <option value="hi">Hindi / Hinglish</option>
+              </select>
+            </div>
+
+            <div class="inline-select" id="theme-wrap">
+              <label for="theme-select">Fallback style</label>
+              <select id="theme-select" name="themeId">
+                <option value="editorial-cream" selected>Editorial Cream</option>
+                <option value="midnight-dev">Midnight Dev</option>
+                <option value="api-bridge">API Bridge</option>
+                <option value="terminal-amber">Terminal Amber</option>
+                <option value="clean-diagram">Clean Diagram</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn-primary" id="submit-btn">
+              Prepare for Antigravity
+            </button>
+          </div>
+          <p class="form-error hidden" id="form-error"></p>
+        </form>
+      </section>
+
+      <section class="card hidden" id="progress-section">
+        <div class="section-head">
+          <h2>Current Generation</h2>
+          <span class="muted" id="queue-count"></span>
+        </div>
+        <div id="active-jobs" class="active-jobs"></div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h2>Recent Projects</h2>
+          <span class="muted" id="project-count">0 projects</span>
+        </div>
+        <div id="projects-list" class="projects-list">
+          <div class="empty-state">No projects yet. Upload a voice recording to generate one.</div>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal hidden" id="player-modal">
+      <div class="modal-backdrop" id="modal-close-bg"></div>
+      <div class="modal-box">
+        <div class="modal-head">
+          <strong id="modal-title">Preview</strong>
+          <div class="modal-actions">
+            <a id="modal-download" class="btn-ghost" download>Download MP4</a>
+            <button type="button" class="btn-ghost" id="modal-close-btn">Close</button>
+          </div>
+        </div>
+        <video id="modal-video" controls playsinline></video>
+      </div>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
+

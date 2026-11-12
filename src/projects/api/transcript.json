@@ -1,0 +1,3497 @@
+{
+  "fps": 60,
+  "duration": 55.68,
+  "durationFrames": 3341,
+  "language": "hi",
+  "text": "Namaste, aaj hum ek minute mein samjhenge ki API kya hoti hai? API ka full form hai, Application Programming Interface. Ise samajhne ke liye ek restaurant ka example lete hain. Maan lijiye aap ek restaurant mein table par baithe hain aur kitchen mein khana ban raha hai. Aap seedhe kitchen mein jaakar chef ko order nahi dete, balki ek waiter aata hai, aapka order leta hai, kitchen mein chef ko batata hai, aur phir khana banne ke baad aapki table par laakar deta hai. Technology ki duniya mein, API bilkul isi waiter ki tarah kaam karti hai. Jab aap apne phone par koi food delivery app ya weather app kholte hain, to aapka phone server ko ek request bhejta hai. API aapki is request ko server tak lejaati hai, wahan se zaroori data uthati hai, aur aapki screen par dikhati hai. Aasaan shabdon mein kahein to, API do alag alag software ya apps ke beech ek bridge, yaani pul ka kaam karti hai, jis se woh aapas mein baat kar paate hain, aur data share kar paate hain.",
+  "words": [
+    {
+      "id": 0,
+      "word": "Namaste,",
+      "start": 0.0,
+      "end": 0.58,
+      "startFrame": 0,
+      "endFrame": 35,
+      "probability": 0.697
+    },
+    {
+      "id": 1,
+      "word": "aaj",
+      "start": 0.9,
+      "end": 1.14,
+      "startFrame": 54,
+      "endFrame": 68,
+      "probability": 0.919
+    },
+    {
+      "id": 2,
+      "word": "hum",
+      "start": 1.14,
+      "end": 1.32,
+      "startFrame": 68,
+      "endFrame": 79,
+      "probability": 0.647
+    },
+    {
+      "id": 3,
+      "word": "ek",
+      "start": 1.32,
+      "end": 1.58,
+      "startFrame": 79,
+      "endFrame": 95,
+      "probability": 0.884
+    },
+    {
+      "id": 4,
+      "word": "minute",
+      "start": 1.58,
+      "end": 1.82,
+      "startFrame": 95,
+      "endFrame": 109,
+      "probability": 0.53
+    },
+    {
+      "id": 5,
+      "word": "mein",
+      "start": 1.82,
+      "end": 1.98,
+      "startFrame": 109,
+      "endFrame": 119,
+      "probability": 0.845
+    },
+    {
+      "id": 6,
+      "word": "samjhenge",
+      "start": 1.98,
+      "end": 2.48,
+      "startFrame": 119,
+      "endFrame": 149,
+      "probability": 0.792
+    },
+    {
+      "id": 7,
+      "word": "ki",
+      "start": 2.48,
+      "end": 2.72,
+      "startFrame": 149,
+      "endFrame": 163,
+      "probability": 0.514
+    },
+    {
+      "id": 8,
+      "word": "API",
+      "start": 2.72,
+      "end": 3.06,
+      "startFrame": 163,
+      "endFrame": 184,
+      "probability": 0.262
+    },
+    {
+      "id": 9,
+      "word": "kya",
+      "start": 3.06,
+      "end": 3.42,
+      "startFrame": 184,
+      "endFrame": 205,
+      "probability": 0.894
+    },
+    {
+      "id": 10,
+      "word": "hoti",
+      "start": 3.42,
+      "end": 3.68,
+      "startFrame": 205,
+      "endFrame": 221,
+      "probability": 0.871
+    },
+    {
+      "id": 11,
+      "word": "hai?",
+      "start": 3.68,
+      "end": 3.82,
+      "startFrame": 221,
+      "endFrame": 229,
+      "probability": 0.979
+    },
+    {
+      "id": 12,
+      "word": "API",
+      "start": 4.3,
+      "end": 4.66,
+      "startFrame": 258,
+      "endFrame": 280,
+      "probability": 0.908
+    },
+    {
+      "id": 13,
+      "word": "ka",
+      "start": 4.66,
+      "end": 4.88,
+      "startFrame": 280,
+      "endFrame": 293,
+      "probability": 0.646
+    },
+    {
+      "id": 14,
+      "word": "full",
+      "start": 4.88,
+      "end": 5.1,
+      "startFrame": 293,
+      "endFrame": 306,
+      "probability": 0.474
+    },
+    {
+      "id": 15,
+      "word": "form",
+      "start": 5.1,
+      "end": 5.34,
+      "startFrame": 306,
+      "endFrame": 320,
+      "probability": 0.958
+    },
+    {
+      "id": 16,
+      "word": "hai,",
+      "start": 5.34,
+      "end": 5.56,
+      "startFrame": 320,
+      "endFrame": 334,
+      "probability": 0.959
+    },
+    {
+      "id": 17,
+      "word": "Application",
+      "start": 5.72,
+      "end": 6.16,
+      "startFrame": 343,
+      "endFrame": 370,
+      "probability": 0.146
+    },
+    {
+      "id": 18,
+      "word": "Programming",
+      "start": 6.16,
+      "end": 6.82,
+      "startFrame": 370,
+      "endFrame": 409,
+      "probability": 0.608
+    },
+    {
+      "id": 19,
+      "word": "Interface.",
+      "start": 6.82,
+      "end": 7.46,
+      "startFrame": 409,
+      "endFrame": 448,
+      "probability": 0.919
+    },
+    {
+      "id": 20,
+      "word": "Ise",
+      "start": 8.14,
+      "end": 8.42,
+      "startFrame": 488,
+      "endFrame": 505,
+      "probability": 0.732
+    },
+    {
+      "id": 21,
+      "word": "samajhne",
+      "start": 8.42,
+      "end": 8.86,
+      "startFrame": 505,
+      "endFrame": 532,
+      "probability": 0.864
+    },
+    {
+      "id": 22,
+      "word": "ke",
+      "start": 8.86,
+      "end": 8.98,
+      "startFrame": 532,
+      "endFrame": 539,
+      "probability": 0.662
+    },
+    {
+      "id": 23,
+      "word": "liye",
+      "start": 8.98,
+      "end": 9.18,
+      "startFrame": 539,
+      "endFrame": 551,
+      "probability": 0.866
+    },
+    {
+      "id": 24,
+      "word": "ek",
+      "start": 9.18,
+      "end": 9.36,
+      "startFrame": 551,
+      "endFrame": 562,
+      "probability": 0.832
+    },
+    {
+      "id": 25,
+      "word": "restaurant",
+      "start": 9.36,
+      "end": 9.74,
+      "startFrame": 562,
+      "endFrame": 584,
+      "probability": 0.883
+    },
+    {
+      "id": 26,
+      "word": "ka",
+      "start": 9.74,
+      "end": 9.94,
+      "startFrame": 584,
+      "endFrame": 596,
+      "probability": 0.869
+    },
+    {
+      "id": 27,
+      "word": "example",
+      "start": 9.94,
+      "end": 10.38,
+      "startFrame": 596,
+      "endFrame": 623,
+      "probability": 0.67
+    },
+    {
+      "id": 28,
+      "word": "lete",
+      "start": 10.38,
+      "end": 10.64,
+      "startFrame": 623,
+      "endFrame": 638,
+      "probability": 0.85
+    },
+    {
+      "id": 29,
+      "word": "hain.",
+      "start": 10.64,
+      "end": 10.82,
+      "startFrame": 638,
+      "endFrame": 649,
+      "probability": 0.879
+    },
+    {
+      "id": 30,
+      "word": "Maan",
+      "start": 11.2,
+      "end": 11.52,
+      "startFrame": 672,
+      "endFrame": 691,
+      "probability": 0.785
+    },
+    {
+      "id": 31,
+      "word": "lijiye",
+      "start": 11.52,
+      "end": 11.82,
+      "startFrame": 691,
+      "endFrame": 709,
+      "probability": 0.752
+    },
+    {
+      "id": 32,
+      "word": "aap",
+      "start": 11.82,
+      "end": 12.16,
+      "startFrame": 709,
+      "endFrame": 730,
+      "probability": 0.864
+    },
+    {
+      "id": 33,
+      "word": "ek",
+      "start": 12.16,
+      "end": 12.28,
+      "startFrame": 730,
+      "endFrame": 737,
+      "probability": 0.877
+    },
+    {
+      "id": 34,
+      "word": "restaurant",
+      "start": 12.28,
+      "end": 12.68,
+      "startFrame": 737,
+      "endFrame": 761,
+      "probability": 0.98
+    },
+    {
+      "id": 35,
+      "word": "mein",
+      "start": 12.68,
+      "end": 12.96,
+      "startFrame": 761,
+      "endFrame": 778,
+      "probability": 0.85
+    },
+    {
+      "id": 36,
+      "word": "table",
+      "start": 12.96,
+      "end": 13.18,
+      "startFrame": 778,
+      "endFrame": 791,
+      "probability": 0.368
+    },
+    {
+      "id": 37,
+      "word": "par",
+      "start": 13.18,
+      "end": 13.46,
+      "startFrame": 791,
+      "endFrame": 808,
+      "probability": 0.706
+    },
+    {
+      "id": 38,
+      "word": "baithe",
+      "start": 13.46,
+      "end": 13.66,
+      "startFrame": 808,
+      "endFrame": 820,
+      "probability": 0.671
+    },
+    {
+      "id": 39,
+      "word": "hain",
+      "start": 13.66,
+      "end": 13.98,
+      "startFrame": 820,
+      "endFrame": 839,
+      "probability": 0.812
+    },
+    {
+      "id": 40,
+      "word": "aur",
+      "start": 13.98,
+      "end": 14.4,
+      "startFrame": 839,
+      "endFrame": 864,
+      "probability": 0.637
+    },
+    {
+      "id": 41,
+      "word": "kitchen",
+      "start": 14.4,
+      "end": 14.62,
+      "startFrame": 864,
+      "endFrame": 877,
+      "probability": 0.535
+    },
+    {
+      "id": 42,
+      "word": "mein",
+      "start": 14.62,
+      "end": 14.82,
+      "startFrame": 877,
+      "endFrame": 889,
+      "probability": 0.96
+    },
+    {
+      "id": 43,
+      "word": "khana",
+      "start": 14.82,
+      "end": 15.18,
+      "startFrame": 889,
+      "endFrame": 911,
+      "probability": 0.752
+    },
+    {
+      "id": 44,
+      "word": "ban",
+      "start": 15.18,
+      "end": 15.3,
+      "startFrame": 911,
+      "endFrame": 918,
+      "probability": 0.963
+    },
+    {
+      "id": 45,
+      "word": "raha",
+      "start": 15.3,
+      "end": 15.56,
+      "startFrame": 918,
+      "endFrame": 934,
+      "probability": 0.952
+    },
+    {
+      "id": 46,
+      "word": "hai.",
+      "start": 15.56,
+      "end": 15.72,
+      "startFrame": 934,
+      "endFrame": 943,
+      "probability": 0.962
+    },
+    {
+      "id": 47,
+      "word": "Aap",
+      "start": 16.14,
+      "end": 16.32,
+      "startFrame": 968,
+      "endFrame": 979,
+      "probability": 0.937
+    },
+    {
+      "id": 48,
+      "word": "seedhe",
+      "start": 16.32,
+      "end": 16.66,
+      "startFrame": 979,
+      "endFrame": 1000,
+      "probability": 0.711
+    },
+    {
+      "id": 49,
+      "word": "kitchen",
+      "start": 16.66,
+      "end": 16.9,
+      "startFrame": 1000,
+      "endFrame": 1014,
+      "probability": 0.621
+    },
+    {
+      "id": 50,
+      "word": "mein",
+      "start": 16.9,
+      "end": 17.1,
+      "startFrame": 1014,
+      "endFrame": 1026,
+      "probability": 0.975
+    },
+    {
+      "id": 51,
+      "word": "jaakar",
+      "start": 17.1,
+      "end": 17.42,
+      "startFrame": 1026,
+      "endFrame": 1045,
+      "probability": 0.783
+    },
+    {
+      "id": 52,
+      "word": "chef",
+      "start": 17.42,
+      "end": 17.62,
+      "startFrame": 1045,
+      "endFrame": 1057,
+      "probability": 0.788
+    },
+    {
+      "id": 53,
+      "word": "ko",
+      "start": 17.62,
+      "end": 17.82,
+      "startFrame": 1057,
+      "endFrame": 1069,
+      "probability": 0.969
+    },
+    {
+      "id": 54,
+      "word": "order",
+      "start": 17.82,
+      "end": 18.02,
+      "startFrame": 1069,
+      "endFrame": 1081,
+      "probability": 0.96
+    },
+    {
+      "id": 55,
+      "word": "nahi",
+      "start": 18.02,
+      "end": 18.28,
+      "startFrame": 1081,
+      "endFrame": 1097,
+      "probability": 0.889
+    },
+    {
+      "id": 56,
+      "word": "dete,",
+      "start": 18.28,
+      "end": 18.56,
+      "startFrame": 1097,
+      "endFrame": 1114,
+      "probability": 0.852
+    },
+    {
+      "id": 57,
+      "word": "balki",
+      "start": 18.56,
+      "end": 19.24,
+      "startFrame": 1114,
+      "endFrame": 1154,
+      "probability": 0.54
+    },
+    {
+      "id": 58,
+      "word": "ek",
+      "start": 19.24,
+      "end": 19.36,
+      "startFrame": 1154,
+      "endFrame": 1162,
+      "probability": 0.671
+    },
+    {
+      "id": 59,
+      "word": "waiter",
+      "start": 19.36,
+      "end": 19.64,
+      "startFrame": 1162,
+      "endFrame": 1178,
+      "probability": 0.002
+    },
+    {
+      "id": 60,
+      "word": "aata",
+      "start": 19.64,
+      "end": 20.04,
+      "startFrame": 1178,
+      "endFrame": 1202,
+      "probability": 0.753
+    },
+    {
+      "id": 61,
+      "word": "hai,",
+      "start": 20.04,
+      "end": 20.18,
+      "startFrame": 1202,
+      "endFrame": 1211,
+      "probability": 0.963
+    },
+    {
+      "id": 62,
+      "word": "aapka",
+      "start": 20.42,
+      "end": 20.68,
+      "startFrame": 1225,
+      "endFrame": 1241,
+      "probability": 0.825
+    },
+    {
+      "id": 63,
+      "word": "order",
+      "start": 20.68,
+      "end": 20.92,
+      "startFrame": 1241,
+      "endFrame": 1255,
+      "probability": 0.864
+    },
+    {
+      "id": 64,
+      "word": "leta",
+      "start": 20.92,
+      "end": 21.34,
+      "startFrame": 1255,
+      "endFrame": 1280,
+      "probability": 0.926
+    },
+    {
+      "id": 65,
+      "word": "hai,",
+      "start": 21.34,
+      "end": 21.54,
+      "startFrame": 1280,
+      "endFrame": 1292,
+      "probability": 0.986
+    },
+    {
+      "id": 66,
+      "word": "kitchen",
+      "start": 21.78,
+      "end": 22.0,
+      "startFrame": 1307,
+      "endFrame": 1320,
+      "probability": 0.137
+    },
+    {
+      "id": 67,
+      "word": "mein",
+      "start": 22.0,
+      "end": 22.2,
+      "startFrame": 1320,
+      "endFrame": 1332,
+      "probability": 0.815
+    },
+    {
+      "id": 68,
+      "word": "chef",
+      "start": 22.2,
+      "end": 22.42,
+      "startFrame": 1332,
+      "endFrame": 1345,
+      "probability": 0.967
+    },
+    {
+      "id": 69,
+      "word": "ko",
+      "start": 22.42,
+      "end": 22.6,
+      "startFrame": 1345,
+      "endFrame": 1356,
+      "probability": 0.96
+    },
+    {
+      "id": 70,
+      "word": "batata",
+      "start": 22.6,
+      "end": 23.02,
+      "startFrame": 1356,
+      "endFrame": 1381,
+      "probability": 0.848
+    },
+    {
+      "id": 71,
+      "word": "hai,",
+      "start": 23.02,
+      "end": 23.24,
+      "startFrame": 1381,
+      "endFrame": 1394,
+      "probability": 0.989
+    },
+    {
+      "id": 72,
+      "word": "aur",
+      "start": 23.64,
+      "end": 23.7,
+      "startFrame": 1418,
+      "endFrame": 1422,
+      "probability": 0.695
+    },
+    {
+      "id": 73,
+      "word": "phir",
+      "start": 23.7,
+      "end": 23.82,
+      "startFrame": 1422,
+      "endFrame": 1429,
+      "probability": 0.793
+    },
+    {
+      "id": 74,
+      "word": "khana",
+      "start": 23.82,
+      "end": 24.22,
+      "startFrame": 1429,
+      "endFrame": 1453,
+      "probability": 0.759
+    },
+    {
+      "id": 75,
+      "word": "banne",
+      "start": 24.22,
+      "end": 24.52,
+      "startFrame": 1453,
+      "endFrame": 1471,
+      "probability": 0.846
+    },
+    {
+      "id": 76,
+      "word": "ke",
+      "start": 24.52,
+      "end": 24.62,
+      "startFrame": 1471,
+      "endFrame": 1477,
+      "probability": 0.693
+    },
+    {
+      "id": 77,
+      "word": "baad",
+      "start": 24.62,
+      "end": 24.84,
+      "startFrame": 1477,
+      "endFrame": 1490,
+      "probability": 0.795
+    },
+    {
+      "id": 78,
+      "word": "aapki",
+      "start": 24.84,
+      "end": 25.12,
+      "startFrame": 1490,
+      "endFrame": 1507,
+      "probability": 0.822
+    },
+    {
+      "id": 79,
+      "word": "table",
+      "start": 25.12,
+      "end": 25.4,
+      "startFrame": 1507,
+      "endFrame": 1524,
+      "probability": 0.812
+    },
+    {
+      "id": 80,
+      "word": "par",
+      "start": 25.4,
+      "end": 25.62,
+      "startFrame": 1524,
+      "endFrame": 1537,
+      "probability": 0.857
+    },
+    {
+      "id": 81,
+      "word": "laakar",
+      "start": 25.62,
+      "end": 25.92,
+      "startFrame": 1537,
+      "endFrame": 1555,
+      "probability": 0.845
+    },
+    {
+      "id": 82,
+      "word": "deta",
+      "start": 25.92,
+      "end": 26.22,
+      "startFrame": 1555,
+      "endFrame": 1573,
+      "probability": 0.849
+    },
+    {
+      "id": 83,
+      "word": "hai.",
+      "start": 26.22,
+      "end": 26.34,
+      "startFrame": 1573,
+      "endFrame": 1580,
+      "probability": 0.987
+    },
+    {
+      "id": 84,
+      "word": "Technology",
+      "start": 26.94,
+      "end": 27.42,
+      "startFrame": 1616,
+      "endFrame": 1645,
+      "probability": 0.635
+    },
+    {
+      "id": 85,
+      "word": "ki",
+      "start": 27.42,
+      "end": 27.54,
+      "startFrame": 1645,
+      "endFrame": 1652,
+      "probability": 0.731
+    },
+    {
+      "id": 86,
+      "word": "duniya",
+      "start": 27.54,
+      "end": 27.86,
+      "startFrame": 1652,
+      "endFrame": 1672,
+      "probability": 0.765
+    },
+    {
+      "id": 87,
+      "word": "mein,",
+      "start": 27.86,
+      "end": 28.3,
+      "startFrame": 1672,
+      "endFrame": 1698,
+      "probability": 0.939
+    },
+    {
+      "id": 88,
+      "word": "API",
+      "start": 28.3,
+      "end": 28.7,
+      "startFrame": 1698,
+      "endFrame": 1722,
+      "probability": 0.153
+    },
+    {
+      "id": 89,
+      "word": "bilkul",
+      "start": 28.7,
+      "end": 29.46,
+      "startFrame": 1722,
+      "endFrame": 1768,
+      "probability": 0.614
+    },
+    {
+      "id": 90,
+      "word": "isi",
+      "start": 29.46,
+      "end": 29.7,
+      "startFrame": 1768,
+      "endFrame": 1782,
+      "probability": 0.889
+    },
+    {
+      "id": 91,
+      "word": "waiter",
+      "start": 29.7,
+      "end": 29.94,
+      "startFrame": 1782,
+      "endFrame": 1796,
+      "probability": 0.924
+    },
+    {
+      "id": 92,
+      "word": "ki",
+      "start": 29.94,
+      "end": 30.16,
+      "startFrame": 1796,
+      "endFrame": 1810,
+      "probability": 0.623
+    },
+    {
+      "id": 93,
+      "word": "tarah",
+      "start": 30.16,
+      "end": 30.32,
+      "startFrame": 1810,
+      "endFrame": 1819,
+      "probability": 0.562
+    },
+    {
+      "id": 94,
+      "word": "kaam",
+      "start": 30.32,
+      "end": 30.54,
+      "startFrame": 1819,
+      "endFrame": 1832,
+      "probability": 0.832
+    },
+    {
+      "id": 95,
+      "word": "karti",
+      "start": 30.54,
+      "end": 30.9,
+      "startFrame": 1832,
+      "endFrame": 1854,
+      "probability": 0.875
+    },
+    {
+      "id": 96,
+      "word": "hai.",
+      "start": 30.9,
+      "end": 31.02,
+      "startFrame": 1854,
+      "endFrame": 1861,
+      "probability": 0.991
+    },
+    {
+      "id": 97,
+      "word": "Jab",
+      "start": 31.44,
+      "end": 31.62,
+      "startFrame": 1886,
+      "endFrame": 1897,
+      "probability": 0.915
+    },
+    {
+      "id": 98,
+      "word": "aap",
+      "start": 31.62,
+      "end": 31.76,
+      "startFrame": 1897,
+      "endFrame": 1906,
+      "probability": 0.936
+    },
+    {
+      "id": 99,
+      "word": "apne",
+      "start": 31.76,
+      "end": 31.96,
+      "startFrame": 1906,
+      "endFrame": 1918,
+      "probability": 0.772
+    },
+    {
+      "id": 100,
+      "word": "phone",
+      "start": 31.96,
+      "end": 32.18,
+      "startFrame": 1918,
+      "endFrame": 1931,
+      "probability": 0.551
+    },
+    {
+      "id": 101,
+      "word": "par",
+      "start": 32.18,
+      "end": 32.44,
+      "startFrame": 1931,
+      "endFrame": 1946,
+      "probability": 0.688
+    },
+    {
+      "id": 102,
+      "word": "koi",
+      "start": 32.44,
+      "end": 32.62,
+      "startFrame": 1946,
+      "endFrame": 1957,
+      "probability": 0.825
+    },
+    {
+      "id": 103,
+      "word": "food",
+      "start": 32.62,
+      "end": 32.86,
+      "startFrame": 1957,
+      "endFrame": 1972,
+      "probability": 0.965
+    },
+    {
+      "id": 104,
+      "word": "delivery",
+      "start": 32.86,
+      "end": 33.22,
+      "startFrame": 1972,
+      "endFrame": 1993,
+      "probability": 0.979
+    },
+    {
+      "id": 105,
+      "word": "app",
+      "start": 33.22,
+      "end": 33.72,
+      "startFrame": 1993,
+      "endFrame": 2023,
+      "probability": 0.901
+    },
+    {
+      "id": 106,
+      "word": "ya",
+      "start": 33.72,
+      "end": 33.92,
+      "startFrame": 2023,
+      "endFrame": 2035,
+      "probability": 0.705
+    },
+    {
+      "id": 107,
+      "word": "weather",
+      "start": 33.92,
+      "end": 34.16,
+      "startFrame": 2035,
+      "endFrame": 2050,
+      "probability": 0.669
+    },
+    {
+      "id": 108,
+      "word": "app",
+      "start": 34.16,
+      "end": 34.38,
+      "startFrame": 2050,
+      "endFrame": 2063,
+      "probability": 0.992
+    },
+    {
+      "id": 109,
+      "word": "kholte",
+      "start": 34.38,
+      "end": 34.82,
+      "startFrame": 2063,
+      "endFrame": 2089,
+      "probability": 0.773
+    },
+    {
+      "id": 110,
+      "word": "hain,",
+      "start": 34.82,
+      "end": 34.98,
+      "startFrame": 2089,
+      "endFrame": 2099,
+      "probability": 0.982
+    },
+    {
+      "id": 111,
+      "word": "to",
+      "start": 34.98,
+      "end": 35.5,
+      "startFrame": 2099,
+      "endFrame": 2130,
+      "probability": 0.794
+    },
+    {
+      "id": 112,
+      "word": "aapka",
+      "start": 35.5,
+      "end": 35.74,
+      "startFrame": 2130,
+      "endFrame": 2144,
+      "probability": 0.756
+    },
+    {
+      "id": 113,
+      "word": "phone",
+      "start": 35.74,
+      "end": 35.94,
+      "startFrame": 2144,
+      "endFrame": 2156,
+      "probability": 0.045
+    },
+    {
+      "id": 114,
+      "word": "server",
+      "start": 35.94,
+      "end": 36.36,
+      "startFrame": 2156,
+      "endFrame": 2182,
+      "probability": 0.747
+    },
+    {
+      "id": 115,
+      "word": "ko",
+      "start": 36.36,
+      "end": 36.56,
+      "startFrame": 2182,
+      "endFrame": 2194,
+      "probability": 0.874
+    },
+    {
+      "id": 116,
+      "word": "ek",
+      "start": 36.56,
+      "end": 36.68,
+      "startFrame": 2194,
+      "endFrame": 2201,
+      "probability": 0.618
+    },
+    {
+      "id": 117,
+      "word": "request",
+      "start": 36.68,
+      "end": 37.0,
+      "startFrame": 2201,
+      "endFrame": 2220,
+      "probability": 0.805
+    },
+    {
+      "id": 118,
+      "word": "bhejta",
+      "start": 37.0,
+      "end": 37.52,
+      "startFrame": 2220,
+      "endFrame": 2251,
+      "probability": 0.475
+    },
+    {
+      "id": 119,
+      "word": "hai.",
+      "start": 37.52,
+      "end": 37.64,
+      "startFrame": 2251,
+      "endFrame": 2258,
+      "probability": 0.964
+    },
+    {
+      "id": 120,
+      "word": "API",
+      "start": 38.04,
+      "end": 38.42,
+      "startFrame": 2282,
+      "endFrame": 2305,
+      "probability": 0.607
+    },
+    {
+      "id": 121,
+      "word": "aapki",
+      "start": 38.42,
+      "end": 38.82,
+      "startFrame": 2305,
+      "endFrame": 2329,
+      "probability": 0.864
+    },
+    {
+      "id": 122,
+      "word": "is",
+      "start": 38.82,
+      "end": 38.92,
+      "startFrame": 2329,
+      "endFrame": 2335,
+      "probability": 0.684
+    },
+    {
+      "id": 123,
+      "word": "request",
+      "start": 38.92,
+      "end": 39.22,
+      "startFrame": 2335,
+      "endFrame": 2353,
+      "probability": 0.826
+    },
+    {
+      "id": 124,
+      "word": "ko",
+      "start": 39.22,
+      "end": 39.5,
+      "startFrame": 2353,
+      "endFrame": 2370,
+      "probability": 0.975
+    },
+    {
+      "id": 125,
+      "word": "server",
+      "start": 39.5,
+      "end": 39.82,
+      "startFrame": 2370,
+      "endFrame": 2389,
+      "probability": 0.966
+    },
+    {
+      "id": 126,
+      "word": "tak",
+      "start": 39.82,
+      "end": 40.08,
+      "startFrame": 2389,
+      "endFrame": 2405,
+      "probability": 0.767
+    },
+    {
+      "id": 127,
+      "word": "lejaati",
+      "start": 40.08,
+      "end": 40.58,
+      "startFrame": 2405,
+      "endFrame": 2435,
+      "probability": 0.855
+    },
+    {
+      "id": 128,
+      "word": "hai,",
+      "start": 40.58,
+      "end": 40.8,
+      "startFrame": 2435,
+      "endFrame": 2448,
+      "probability": 0.982
+    },
+    {
+      "id": 129,
+      "word": "wahan",
+      "start": 41.2,
+      "end": 41.48,
+      "startFrame": 2472,
+      "endFrame": 2489,
+      "probability": 0.712
+    },
+    {
+      "id": 130,
+      "word": "se",
+      "start": 41.48,
+      "end": 41.62,
+      "startFrame": 2489,
+      "endFrame": 2497,
+      "probability": 0.619
+    },
+    {
+      "id": 131,
+      "word": "zaroori",
+      "start": 41.62,
+      "end": 42.02,
+      "startFrame": 2497,
+      "endFrame": 2521,
+      "probability": 0.658
+    },
+    {
+      "id": 132,
+      "word": "data",
+      "start": 42.02,
+      "end": 42.24,
+      "startFrame": 2521,
+      "endFrame": 2534,
+      "probability": 0.68
+    },
+    {
+      "id": 133,
+      "word": "uthati",
+      "start": 42.24,
+      "end": 42.8,
+      "startFrame": 2534,
+      "endFrame": 2568,
+      "probability": 0.753
+    },
+    {
+      "id": 134,
+      "word": "hai,",
+      "start": 42.8,
+      "end": 43.08,
+      "startFrame": 2568,
+      "endFrame": 2585,
+      "probability": 0.99
+    },
+    {
+      "id": 135,
+      "word": "aur",
+      "start": 43.42,
+      "end": 43.54,
+      "startFrame": 2605,
+      "endFrame": 2612,
+      "probability": 0.833
+    },
+    {
+      "id": 136,
+      "word": "aapki",
+      "start": 43.54,
+      "end": 43.8,
+      "startFrame": 2612,
+      "endFrame": 2628,
+      "probability": 0.915
+    },
+    {
+      "id": 137,
+      "word": "screen",
+      "start": 43.8,
+      "end": 44.06,
+      "startFrame": 2628,
+      "endFrame": 2644,
+      "probability": 0.849
+    },
+    {
+      "id": 138,
+      "word": "par",
+      "start": 44.06,
+      "end": 44.3,
+      "startFrame": 2644,
+      "endFrame": 2658,
+      "probability": 0.866
+    },
+    {
+      "id": 139,
+      "word": "dikhati",
+      "start": 44.3,
+      "end": 44.72,
+      "startFrame": 2658,
+      "endFrame": 2683,
+      "probability": 0.881
+    },
+    {
+      "id": 140,
+      "word": "hai.",
+      "start": 44.72,
+      "end": 44.82,
+      "startFrame": 2683,
+      "endFrame": 2689,
+      "probability": 0.992
+    },
+    {
+      "id": 141,
+      "word": "Aasaan",
+      "start": 45.18,
+      "end": 45.6,
+      "startFrame": 2711,
+      "endFrame": 2736,
+      "probability": 0.836
+    },
+    {
+      "id": 142,
+      "word": "shabdon",
+      "start": 45.6,
+      "end": 45.92,
+      "startFrame": 2736,
+      "endFrame": 2755,
+      "probability": 0.748
+    },
+    {
+      "id": 143,
+      "word": "mein",
+      "start": 45.92,
+      "end": 46.1,
+      "startFrame": 2755,
+      "endFrame": 2766,
+      "probability": 0.861
+    },
+    {
+      "id": 144,
+      "word": "kahein",
+      "start": 46.1,
+      "end": 46.34,
+      "startFrame": 2766,
+      "endFrame": 2780,
+      "probability": 0.711
+    },
+    {
+      "id": 145,
+      "word": "to,",
+      "start": 46.34,
+      "end": 46.82,
+      "startFrame": 2780,
+      "endFrame": 2809,
+      "probability": 0.729
+    },
+    {
+      "id": 146,
+      "word": "API",
+      "start": 47.0,
+      "end": 47.26,
+      "startFrame": 2820,
+      "endFrame": 2836,
+      "probability": 0.861
+    },
+    {
+      "id": 147,
+      "word": "do",
+      "start": 47.26,
+      "end": 47.8,
+      "startFrame": 2836,
+      "endFrame": 2868,
+      "probability": 0.486
+    },
+    {
+      "id": 148,
+      "word": "alag",
+      "start": 47.8,
+      "end": 48.1,
+      "startFrame": 2868,
+      "endFrame": 2886,
+      "probability": 0.716
+    },
+    {
+      "id": 149,
+      "word": "alag",
+      "start": 48.1,
+      "end": 48.32,
+      "startFrame": 2886,
+      "endFrame": 2899,
+      "probability": 0.296
+    },
+    {
+      "id": 150,
+      "word": "software",
+      "start": 48.32,
+      "end": 48.76,
+      "startFrame": 2899,
+      "endFrame": 2926,
+      "probability": 0.902
+    },
+    {
+      "id": 151,
+      "word": "ya",
+      "start": 48.76,
+      "end": 49.16,
+      "startFrame": 2926,
+      "endFrame": 2950,
+      "probability": 0.86
+    },
+    {
+      "id": 152,
+      "word": "apps",
+      "start": 49.16,
+      "end": 49.48,
+      "startFrame": 2950,
+      "endFrame": 2969,
+      "probability": 0.884
+    },
+    {
+      "id": 153,
+      "word": "ke",
+      "start": 49.48,
+      "end": 49.72,
+      "startFrame": 2969,
+      "endFrame": 2983,
+      "probability": 0.939
+    },
+    {
+      "id": 154,
+      "word": "beech",
+      "start": 49.72,
+      "end": 50.0,
+      "startFrame": 2983,
+      "endFrame": 3000,
+      "probability": 0.808
+    },
+    {
+      "id": 155,
+      "word": "ek",
+      "start": 50.0,
+      "end": 50.1,
+      "startFrame": 3000,
+      "endFrame": 3006,
+      "probability": 0.582
+    },
+    {
+      "id": 156,
+      "word": "bridge,",
+      "start": 50.1,
+      "end": 50.56,
+      "startFrame": 3006,
+      "endFrame": 3034,
+      "probability": 0.676
+    },
+    {
+      "id": 157,
+      "word": "yaani",
+      "start": 50.68,
+      "end": 50.78,
+      "startFrame": 3041,
+      "endFrame": 3047,
+      "probability": 0.761
+    },
+    {
+      "id": 158,
+      "word": "pul",
+      "start": 50.78,
+      "end": 51.2,
+      "startFrame": 3047,
+      "endFrame": 3072,
+      "probability": 0.444
+    },
+    {
+      "id": 159,
+      "word": "ka",
+      "start": 51.2,
+      "end": 51.34,
+      "startFrame": 3072,
+      "endFrame": 3080,
+      "probability": 0.933
+    },
+    {
+      "id": 160,
+      "word": "kaam",
+      "start": 51.34,
+      "end": 51.58,
+      "startFrame": 3080,
+      "endFrame": 3095,
+      "probability": 0.794
+    },
+    {
+      "id": 161,
+      "word": "karti",
+      "start": 51.58,
+      "end": 51.92,
+      "startFrame": 3095,
+      "endFrame": 3115,
+      "probability": 0.918
+    },
+    {
+      "id": 162,
+      "word": "hai,",
+      "start": 51.92,
+      "end": 52.08,
+      "startFrame": 3115,
+      "endFrame": 3125,
+      "probability": 0.988
+    },
+    {
+      "id": 163,
+      "word": "jis",
+      "start": 52.08,
+      "end": 52.6,
+      "startFrame": 3125,
+      "endFrame": 3156,
+      "probability": 0.819
+    },
+    {
+      "id": 164,
+      "word": "se",
+      "start": 52.6,
+      "end": 52.7,
+      "startFrame": 3156,
+      "endFrame": 3162,
+      "probability": 0.461
+    },
+    {
+      "id": 165,
+      "word": "woh",
+      "start": 52.7,
+      "end": 52.8,
+      "startFrame": 3162,
+      "endFrame": 3168,
+      "probability": 0.533
+    },
+    {
+      "id": 166,
+      "word": "aapas",
+      "start": 52.8,
+      "end": 53.1,
+      "startFrame": 3168,
+      "endFrame": 3186,
+      "probability": 0.877
+    },
+    {
+      "id": 167,
+      "word": "mein",
+      "start": 53.1,
+      "end": 53.24,
+      "startFrame": 3186,
+      "endFrame": 3194,
+      "probability": 0.908
+    },
+    {
+      "id": 168,
+      "word": "baat",
+      "start": 53.24,
+      "end": 53.5,
+      "startFrame": 3194,
+      "endFrame": 3210,
+      "probability": 0.873
+    },
+    {
+      "id": 169,
+      "word": "kar",
+      "start": 53.5,
+      "end": 53.68,
+      "startFrame": 3210,
+      "endFrame": 3221,
+      "probability": 0.896
+    },
+    {
+      "id": 170,
+      "word": "paate",
+      "start": 53.68,
+      "end": 54.0,
+      "startFrame": 3221,
+      "endFrame": 3240,
+      "probability": 0.542
+    },
+    {
+      "id": 171,
+      "word": "hain,",
+      "start": 54.0,
+      "end": 54.12,
+      "startFrame": 3240,
+      "endFrame": 3247,
+      "probability": 0.946
+    },
+    {
+      "id": 172,
+      "word": "aur",
+      "start": 54.2,
+      "end": 54.34,
+      "startFrame": 3252,
+      "endFrame": 3260,
+      "probability": 0.797
+    },
+    {
+      "id": 173,
+      "word": "data",
+      "start": 54.34,
+      "end": 54.64,
+      "startFrame": 3260,
+      "endFrame": 3278,
+      "probability": 0.693
+    },
+    {
+      "id": 174,
+      "word": "share",
+      "start": 54.64,
+      "end": 54.86,
+      "startFrame": 3278,
+      "endFrame": 3292,
+      "probability": 0.78
+    },
+    {
+      "id": 175,
+      "word": "kar",
+      "start": 54.86,
+      "end": 55.04,
+      "startFrame": 3292,
+      "endFrame": 3302,
+      "probability": 0.969
+    },
+    {
+      "id": 176,
+      "word": "paate",
+      "start": 55.04,
+      "end": 55.34,
+      "startFrame": 3302,
+      "endFrame": 3320,
+      "probability": 0.926
+    },
+    {
+      "id": 177,
+      "word": "hain.",
+      "start": 55.34,
+      "end": 55.46,
+      "startFrame": 3320,
+      "endFrame": 3328,
+      "probability": 0.988
+    }
+  ],
+  "segments": [
+    {
+      "id": 0,
+      "text": "Namaste, aaj hum ek minute mein samjhenge ki API kya hoti hai?",
+      "start": 0.0,
+      "end": 3.82,
+      "startFrame": 0,
+      "endFrame": 229,
+      "words": [
+        {
+          "id": 0,
+          "word": "Namaste,",
+          "start": 0.0,
+          "end": 0.58,
+          "startFrame": 0,
+          "endFrame": 35,
+          "probability": 0.697
+        },
+        {
+          "id": 1,
+          "word": "aaj",
+          "start": 0.9,
+          "end": 1.14,
+          "startFrame": 54,
+          "endFrame": 68,
+          "probability": 0.919
+        },
+        {
+          "id": 2,
+          "word": "hum",
+          "start": 1.14,
+          "end": 1.32,
+          "startFrame": 68,
+          "endFrame": 79,
+          "probability": 0.647
+        },
+        {
+          "id": 3,
+          "word": "ek",
+          "start": 1.32,
+          "end": 1.58,
+          "startFrame": 79,
+          "endFrame": 95,
+          "probability": 0.884
+        },
+        {
+          "id": 4,
+          "word": "minute",
+          "start": 1.58,
+          "end": 1.82,
+          "startFrame": 95,
+          "endFrame": 109,
+          "probability": 0.53
+        },
+        {
+          "id": 5,
+          "word": "mein",
+          "start": 1.82,
+          "end": 1.98,
+          "startFrame": 109,
+          "endFrame": 119,
+          "probability": 0.845
+        },
+        {
+          "id": 6,
+          "word": "samjhenge",
+          "start": 1.98,
+          "end": 2.48,
+          "startFrame": 119,
+          "endFrame": 149,
+          "probability": 0.792
+        },
+        {
+          "id": 7,
+          "word": "ki",
+          "start": 2.48,
+          "end": 2.72,
+          "startFrame": 149,
+          "endFrame": 163,
+          "probability": 0.514
+        },
+        {
+          "id": 8,
+          "word": "API",
+          "start": 2.72,
+          "end": 3.06,
+          "startFrame": 163,
+          "endFrame": 184,
+          "probability": 0.262
+        },
+        {
+          "id": 9,
+          "word": "kya",
+          "start": 3.06,
+          "end": 3.42,
+          "startFrame": 184,
+          "endFrame": 205,
+          "probability": 0.894
+        },
+        {
+          "id": 10,
+          "word": "hoti",
+          "start": 3.42,
+          "end": 3.68,
+          "startFrame": 205,
+          "endFrame": 221,
+          "probability": 0.871
+        },
+        {
+          "id": 11,
+          "word": "hai?",
+          "start": 3.68,
+          "end": 3.82,
+          "startFrame": 221,
+          "endFrame": 229,
+          "probability": 0.979
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "text": "API ka full form hai, Application Programming Interface.",
+      "start": 4.3,
+      "end": 7.46,
+      "startFrame": 258,
+      "endFrame": 448,
+      "words": [
+        {
+          "id": 12,
+          "word": "API",
+          "start": 4.3,
+          "end": 4.66,
+          "startFrame": 258,
+          "endFrame": 280,
+          "probability": 0.908
+        },
+        {
+          "id": 13,
+          "word": "ka",
+          "start": 4.66,
+          "end": 4.88,
+          "startFrame": 280,
+          "endFrame": 293,
+          "probability": 0.646
+        },
+        {
+          "id": 14,
+          "word": "full",
+          "start": 4.88,
+          "end": 5.1,
+          "startFrame": 293,
+          "endFrame": 306,
+          "probability": 0.474
+        },
+        {
+          "id": 15,
+          "word": "form",
+          "start": 5.1,
+          "end": 5.34,
+          "startFrame": 306,
+          "endFrame": 320,
+          "probability": 0.958
+        },
+        {
+          "id": 16,
+          "word": "hai,",
+          "start": 5.34,
+          "end": 5.56,
+          "startFrame": 320,
+          "endFrame": 334,
+          "probability": 0.959
+        },
+        {
+          "id": 17,
+          "word": "Application",
+          "start": 5.72,
+          "end": 6.16,
+          "startFrame": 343,
+          "endFrame": 370,
+          "probability": 0.146
+        },
+        {
+          "id": 18,
+          "word": "Programming",
+          "start": 6.16,
+          "end": 6.82,
+          "startFrame": 370,
+          "endFrame": 409,
+          "probability": 0.608
+        },
+        {
+          "id": 19,
+          "word": "Interface.",
+          "start": 6.82,
+          "end": 7.46,
+          "startFrame": 409,
+          "endFrame": 448,
+          "probability": 0.919
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Ise samajhne ke liye ek restaurant ka example lete hain.",
+      "start": 8.14,
+      "end": 10.82,
+      "startFrame": 488,
+      "endFrame": 649,
+      "words": [
+        {
+          "id": 20,
+          "word": "Ise",
+          "start": 8.14,
+          "end": 8.42,
+          "startFrame": 488,
+          "endFrame": 505,
+          "probability": 0.732
+        },
+        {
+          "id": 21,
+          "word": "samajhne",
+          "start": 8.42,
+          "end": 8.86,
+          "startFrame": 505,
+          "endFrame": 532,
+          "probability": 0.864
+        },
+        {
+          "id": 22,
+          "word": "ke",
+          "start": 8.86,
+          "end": 8.98,
+          "startFrame": 532,
+          "endFrame": 539,
+          "probability": 0.662
+        },
+        {
+          "id": 23,
+          "word": "liye",
+          "start": 8.98,
+          "end": 9.18,
+          "startFrame": 539,
+          "endFrame": 551,
+          "probability": 0.866
+        },
+        {
+          "id": 24,
+          "word": "ek",
+          "start": 9.18,
+          "end": 9.36,
+          "startFrame": 551,
+          "endFrame": 562,
+          "probability": 0.832
+        },
+        {
+          "id": 25,
+          "word": "restaurant",
+          "start": 9.36,
+          "end": 9.74,
+          "startFrame": 562,
+          "endFrame": 584,
+          "probability": 0.883
+        },
+        {
+          "id": 26,
+          "word": "ka",
+          "start": 9.74,
+          "end": 9.94,
+          "startFrame": 584,
+          "endFrame": 596,
+          "probability": 0.869
+        },
+        {
+          "id": 27,
+          "word": "example",
+          "start": 9.94,
+          "end": 10.38,
+          "startFrame": 596,
+          "endFrame": 623,
+          "probability": 0.67
+        },
+        {
+          "id": 28,
+          "word": "lete",
+          "start": 10.38,
+          "end": 10.64,
+          "startFrame": 623,
+          "endFrame": 638,
+          "probability": 0.85
+        },
+        {
+          "id": 29,
+          "word": "hain.",
+          "start": 10.64,
+          "end": 10.82,
+          "startFrame": 638,
+          "endFrame": 649,
+          "probability": 0.879
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Maan lijiye aap ek restaurant mein table par baithe hain",
+      "start": 11.2,
+      "end": 13.98,
+      "startFrame": 672,
+      "endFrame": 839,
+      "words": [
+        {
+          "id": 30,
+          "word": "Maan",
+          "start": 11.2,
+          "end": 11.52,
+          "startFrame": 672,
+          "endFrame": 691,
+          "probability": 0.785
+        },
+        {
+          "id": 31,
+          "word": "lijiye",
+          "start": 11.52,
+          "end": 11.82,
+          "startFrame": 691,
+          "endFrame": 709,
+          "probability": 0.752
+        },
+        {
+          "id": 32,
+          "word": "aap",
+          "start": 11.82,
+          "end": 12.16,
+          "startFrame": 709,
+          "endFrame": 730,
+          "probability": 0.864
+        },
+        {
+          "id": 33,
+          "word": "ek",
+          "start": 12.16,
+          "end": 12.28,
+          "startFrame": 730,
+          "endFrame": 737,
+          "probability": 0.877
+        },
+        {
+          "id": 34,
+          "word": "restaurant",
+          "start": 12.28,
+          "end": 12.68,
+          "startFrame": 737,
+          "endFrame": 761,
+          "probability": 0.98
+        },
+        {
+          "id": 35,
+          "word": "mein",
+          "start": 12.68,
+          "end": 12.96,
+          "startFrame": 761,
+          "endFrame": 778,
+          "probability": 0.85
+        },
+        {
+          "id": 36,
+          "word": "table",
+          "start": 12.96,
+          "end": 13.18,
+          "startFrame": 778,
+          "endFrame": 791,
+          "probability": 0.368
+        },
+        {
+          "id": 37,
+          "word": "par",
+          "start": 13.18,
+          "end": 13.46,
+          "startFrame": 791,
+          "endFrame": 808,
+          "probability": 0.706
+        },
+        {
+          "id": 38,
+          "word": "baithe",
+          "start": 13.46,
+          "end": 13.66,
+          "startFrame": 808,
+          "endFrame": 820,
+          "probability": 0.671
+        },
+        {
+          "id": 39,
+          "word": "hain",
+          "start": 13.66,
+          "end": 13.98,
+          "startFrame": 820,
+          "endFrame": 839,
+          "probability": 0.812
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "aur kitchen mein khana ban raha hai.",
+      "start": 13.98,
+      "end": 15.72,
+      "startFrame": 839,
+      "endFrame": 943,
+      "words": [
+        {
+          "id": 40,
+          "word": "aur",
+          "start": 13.98,
+          "end": 14.4,
+          "startFrame": 839,
+          "endFrame": 864,
+          "probability": 0.637
+        },
+        {
+          "id": 41,
+          "word": "kitchen",
+          "start": 14.4,
+          "end": 14.62,
+          "startFrame": 864,
+          "endFrame": 877,
+          "probability": 0.535
+        },
+        {
+          "id": 42,
+          "word": "mein",
+          "start": 14.62,
+          "end": 14.82,
+          "startFrame": 877,
+          "endFrame": 889,
+          "probability": 0.96
+        },
+        {
+          "id": 43,
+          "word": "khana",
+          "start": 14.82,
+          "end": 15.18,
+          "startFrame": 889,
+          "endFrame": 911,
+          "probability": 0.752
+        },
+        {
+          "id": 44,
+          "word": "ban",
+          "start": 15.18,
+          "end": 15.3,
+          "startFrame": 911,
+          "endFrame": 918,
+          "probability": 0.963
+        },
+        {
+          "id": 45,
+          "word": "raha",
+          "start": 15.3,
+          "end": 15.56,
+          "startFrame": 918,
+          "endFrame": 934,
+          "probability": 0.952
+        },
+        {
+          "id": 46,
+          "word": "hai.",
+          "start": 15.56,
+          "end": 15.72,
+          "startFrame": 934,
+          "endFrame": 943,
+          "probability": 0.962
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Aap seedhe kitchen mein jaakar chef ko order nahi dete,",
+      "start": 16.14,
+      "end": 18.56,
+      "startFrame": 968,
+      "endFrame": 1114,
+      "words": [
+        {
+          "id": 47,
+          "word": "Aap",
+          "start": 16.14,
+          "end": 16.32,
+          "startFrame": 968,
+          "endFrame": 979,
+          "probability": 0.937
+        },
+        {
+          "id": 48,
+          "word": "seedhe",
+          "start": 16.32,
+          "end": 16.66,
+          "startFrame": 979,
+          "endFrame": 1000,
+          "probability": 0.711
+        },
+        {
+          "id": 49,
+          "word": "kitchen",
+          "start": 16.66,
+          "end": 16.9,
+          "startFrame": 1000,
+          "endFrame": 1014,
+          "probability": 0.621
+        },
+        {
+          "id": 50,
+          "word": "mein",
+          "start": 16.9,
+          "end": 17.1,
+          "startFrame": 1014,
+          "endFrame": 1026,
+          "probability": 0.975
+        },
+        {
+          "id": 51,
+          "word": "jaakar",
+          "start": 17.1,
+          "end": 17.42,
+          "startFrame": 1026,
+          "endFrame": 1045,
+          "probability": 0.783
+        },
+        {
+          "id": 52,
+          "word": "chef",
+          "start": 17.42,
+          "end": 17.62,
+          "startFrame": 1045,
+          "endFrame": 1057,
+          "probability": 0.788
+        },
+        {
+          "id": 53,
+          "word": "ko",
+          "start": 17.62,
+          "end": 17.82,
+          "startFrame": 1057,
+          "endFrame": 1069,
+          "probability": 0.969
+        },
+        {
+          "id": 54,
+          "word": "order",
+          "start": 17.82,
+          "end": 18.02,
+          "startFrame": 1069,
+          "endFrame": 1081,
+          "probability": 0.96
+        },
+        {
+          "id": 55,
+          "word": "nahi",
+          "start": 18.02,
+          "end": 18.28,
+          "startFrame": 1081,
+          "endFrame": 1097,
+          "probability": 0.889
+        },
+        {
+          "id": 56,
+          "word": "dete,",
+          "start": 18.28,
+          "end": 18.56,
+          "startFrame": 1097,
+          "endFrame": 1114,
+          "probability": 0.852
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "balki ek waiter aata hai, aapka order leta hai, kitchen mein chef ko batata hai,",
+      "start": 18.56,
+      "end": 23.24,
+      "startFrame": 1114,
+      "endFrame": 1394,
+      "words": [
+        {
+          "id": 57,
+          "word": "balki",
+          "start": 18.56,
+          "end": 19.24,
+          "startFrame": 1114,
+          "endFrame": 1154,
+          "probability": 0.54
+        },
+        {
+          "id": 58,
+          "word": "ek",
+          "start": 19.24,
+          "end": 19.36,
+          "startFrame": 1154,
+          "endFrame": 1162,
+          "probability": 0.671
+        },
+        {
+          "id": 59,
+          "word": "waiter",
+          "start": 19.36,
+          "end": 19.64,
+          "startFrame": 1162,
+          "endFrame": 1178,
+          "probability": 0.002
+        },
+        {
+          "id": 60,
+          "word": "aata",
+          "start": 19.64,
+          "end": 20.04,
+          "startFrame": 1178,
+          "endFrame": 1202,
+          "probability": 0.753
+        },
+        {
+          "id": 61,
+          "word": "hai,",
+          "start": 20.04,
+          "end": 20.18,
+          "startFrame": 1202,
+          "endFrame": 1211,
+          "probability": 0.963
+        },
+        {
+          "id": 62,
+          "word": "aapka",
+          "start": 20.42,
+          "end": 20.68,
+          "startFrame": 1225,
+          "endFrame": 1241,
+          "probability": 0.825
+        },
+        {
+          "id": 63,
+          "word": "order",
+          "start": 20.68,
+          "end": 20.92,
+          "startFrame": 1241,
+          "endFrame": 1255,
+          "probability": 0.864
+        },
+        {
+          "id": 64,
+          "word": "leta",
+          "start": 20.92,
+          "end": 21.34,
+          "startFrame": 1255,
+          "endFrame": 1280,
+          "probability": 0.926
+        },
+        {
+          "id": 65,
+          "word": "hai,",
+          "start": 21.34,
+          "end": 21.54,
+          "startFrame": 1280,
+          "endFrame": 1292,
+          "probability": 0.986
+        },
+        {
+          "id": 66,
+          "word": "kitchen",
+          "start": 21.78,
+          "end": 22.0,
+          "startFrame": 1307,
+          "endFrame": 1320,
+          "probability": 0.137
+        },
+        {
+          "id": 67,
+          "word": "mein",
+          "start": 22.0,
+          "end": 22.2,
+          "startFrame": 1320,
+          "endFrame": 1332,
+          "probability": 0.815
+        },
+        {
+          "id": 68,
+          "word": "chef",
+          "start": 22.2,
+          "end": 22.42,
+          "startFrame": 1332,
+          "endFrame": 1345,
+          "probability": 0.967
+        },
+        {
+          "id": 69,
+          "word": "ko",
+          "start": 22.42,
+          "end": 22.6,
+          "startFrame": 1345,
+          "endFrame": 1356,
+          "probability": 0.96
+        },
+        {
+          "id": 70,
+          "word": "batata",
+          "start": 22.6,
+          "end": 23.02,
+          "startFrame": 1356,
+          "endFrame": 1381,
+          "probability": 0.848
+        },
+        {
+          "id": 71,
+          "word": "hai,",
+          "start": 23.02,
+          "end": 23.24,
+          "startFrame": 1381,
+          "endFrame": 1394,
+          "probability": 0.989
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "aur phir khana banne ke baad aapki table par laakar deta hai.",
+      "start": 23.64,
+      "end": 26.34,
+      "startFrame": 1418,
+      "endFrame": 1580,
+      "words": [
+        {
+          "id": 72,
+          "word": "aur",
+          "start": 23.64,
+          "end": 23.7,
+          "startFrame": 1418,
+          "endFrame": 1422,
+          "probability": 0.695
+        },
+        {
+          "id": 73,
+          "word": "phir",
+          "start": 23.7,
+          "end": 23.82,
+          "startFrame": 1422,
+          "endFrame": 1429,
+          "probability": 0.793
+        },
+        {
+          "id": 74,
+          "word": "khana",
+          "start": 23.82,
+          "end": 24.22,
+          "startFrame": 1429,
+          "endFrame": 1453,
+          "probability": 0.759
+        },
+        {
+          "id": 75,
+          "word": "banne",
+          "start": 24.22,
+          "end": 24.52,
+          "startFrame": 1453,
+          "endFrame": 1471,
+          "probability": 0.846
+        },
+        {
+          "id": 76,
+          "word": "ke",
+          "start": 24.52,
+          "end": 24.62,
+          "startFrame": 1471,
+          "endFrame": 1477,
+          "probability": 0.693
+        },
+        {
+          "id": 77,
+          "word": "baad",
+          "start": 24.62,
+          "end": 24.84,
+          "startFrame": 1477,
+          "endFrame": 1490,
+          "probability": 0.795
+        },
+        {
+          "id": 78,
+          "word": "aapki",
+          "start": 24.84,
+          "end": 25.12,
+          "startFrame": 1490,
+          "endFrame": 1507,
+          "probability": 0.822
+        },
+        {
+          "id": 79,
+          "word": "table",
+          "start": 25.12,
+          "end": 25.4,
+          "startFrame": 1507,
+          "endFrame": 1524,
+          "probability": 0.812
+        },
+        {
+          "id": 80,
+          "word": "par",
+          "start": 25.4,
+          "end": 25.62,
+          "startFrame": 1524,
+          "endFrame": 1537,
+          "probability": 0.857
+        },
+        {
+          "id": 81,
+          "word": "laakar",
+          "start": 25.62,
+          "end": 25.92,
+          "startFrame": 1537,
+          "endFrame": 1555,
+          "probability": 0.845
+        },
+        {
+          "id": 82,
+          "word": "deta",
+          "start": 25.92,
+          "end": 26.22,
+          "startFrame": 1555,
+          "endFrame": 1573,
+          "probability": 0.849
+        },
+        {
+          "id": 83,
+          "word": "hai.",
+          "start": 26.22,
+          "end": 26.34,
+          "startFrame": 1573,
+          "endFrame": 1580,
+          "probability": 0.987
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Technology ki duniya mein, API bilkul isi waiter ki tarah kaam karti hai.",
+      "start": 26.94,
+      "end": 31.02,
+      "startFrame": 1616,
+      "endFrame": 1861,
+      "words": [
+        {
+          "id": 84,
+          "word": "Technology",
+          "start": 26.94,
+          "end": 27.42,
+          "startFrame": 1616,
+          "endFrame": 1645,
+          "probability": 0.635
+        },
+        {
+          "id": 85,
+          "word": "ki",
+          "start": 27.42,
+          "end": 27.54,
+          "startFrame": 1645,
+          "endFrame": 1652,
+          "probability": 0.731
+        },
+        {
+          "id": 86,
+          "word": "duniya",
+          "start": 27.54,
+          "end": 27.86,
+          "startFrame": 1652,
+          "endFrame": 1672,
+          "probability": 0.765
+        },
+        {
+          "id": 87,
+          "word": "mein,",
+          "start": 27.86,
+          "end": 28.3,
+          "startFrame": 1672,
+          "endFrame": 1698,
+          "probability": 0.939
+        },
+        {
+          "id": 88,
+          "word": "API",
+          "start": 28.3,
+          "end": 28.7,
+          "startFrame": 1698,
+          "endFrame": 1722,
+          "probability": 0.153
+        },
+        {
+          "id": 89,
+          "word": "bilkul",
+          "start": 28.7,
+          "end": 29.46,
+          "startFrame": 1722,
+          "endFrame": 1768,
+          "probability": 0.614
+        },
+        {
+          "id": 90,
+          "word": "isi",
+          "start": 29.46,
+          "end": 29.7,
+          "startFrame": 1768,
+          "endFrame": 1782,
+          "probability": 0.889
+        },
+        {
+          "id": 91,
+          "word": "waiter",
+          "start": 29.7,
+          "end": 29.94,
+          "startFrame": 1782,
+          "endFrame": 1796,
+          "probability": 0.924
+        },
+        {
+          "id": 92,
+          "word": "ki",
+          "start": 29.94,
+          "end": 30.16,
+          "startFrame": 1796,
+          "endFrame": 1810,
+          "probability": 0.623
+        },
+        {
+          "id": 93,
+          "word": "tarah",
+          "start": 30.16,
+          "end": 30.32,
+          "startFrame": 1810,
+          "endFrame": 1819,
+          "probability": 0.562
+        },
+        {
+          "id": 94,
+          "word": "kaam",
+          "start": 30.32,
+          "end": 30.54,
+          "startFrame": 1819,
+          "endFrame": 1832,
+          "probability": 0.832
+        },
+        {
+          "id": 95,
+          "word": "karti",
+          "start": 30.54,
+          "end": 30.9,
+          "startFrame": 1832,
+          "endFrame": 1854,
+          "probability": 0.875
+        },
+        {
+          "id": 96,
+          "word": "hai.",
+          "start": 30.9,
+          "end": 31.02,
+          "startFrame": 1854,
+          "endFrame": 1861,
+          "probability": 0.991
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Jab aap apne phone par koi food delivery app ya weather app kholte hain,",
+      "start": 31.44,
+      "end": 34.98,
+      "startFrame": 1886,
+      "endFrame": 2099,
+      "words": [
+        {
+          "id": 97,
+          "word": "Jab",
+          "start": 31.44,
+          "end": 31.62,
+          "startFrame": 1886,
+          "endFrame": 1897,
+          "probability": 0.915
+        },
+        {
+          "id": 98,
+          "word": "aap",
+          "start": 31.62,
+          "end": 31.76,
+          "startFrame": 1897,
+          "endFrame": 1906,
+          "probability": 0.936
+        },
+        {
+          "id": 99,
+          "word": "apne",
+          "start": 31.76,
+          "end": 31.96,
+          "startFrame": 1906,
+          "endFrame": 1918,
+          "probability": 0.772
+        },
+        {
+          "id": 100,
+          "word": "phone",
+          "start": 31.96,
+          "end": 32.18,
+          "startFrame": 1918,
+          "endFrame": 1931,
+          "probability": 0.551
+        },
+        {
+          "id": 101,
+          "word": "par",
+          "start": 32.18,
+          "end": 32.44,
+          "startFrame": 1931,
+          "endFrame": 1946,
+          "probability": 0.688
+        },
+        {
+          "id": 102,
+          "word": "koi",
+          "start": 32.44,
+          "end": 32.62,
+          "startFrame": 1946,
+          "endFrame": 1957,
+          "probability": 0.825
+        },
+        {
+          "id": 103,
+          "word": "food",
+          "start": 32.62,
+          "end": 32.86,
+          "startFrame": 1957,
+          "endFrame": 1972,
+          "probability": 0.965
+        },
+        {
+          "id": 104,
+          "word": "delivery",
+          "start": 32.86,
+          "end": 33.22,
+          "startFrame": 1972,
+          "endFrame": 1993,
+          "probability": 0.979
+        },
+        {
+          "id": 105,
+          "word": "app",
+          "start": 33.22,
+          "end": 33.72,
+          "startFrame": 1993,
+          "endFrame": 2023,
+          "probability": 0.901
+        },
+        {
+          "id": 106,
+          "word": "ya",
+          "start": 33.72,
+          "end": 33.92,
+          "startFrame": 2023,
+          "endFrame": 2035,
+          "probability": 0.705
+        },
+        {
+          "id": 107,
+          "word": "weather",
+          "start": 33.92,
+          "end": 34.16,
+          "startFrame": 2035,
+          "endFrame": 2050,
+          "probability": 0.669
+        },
+        {
+          "id": 108,
+          "word": "app",
+          "start": 34.16,
+          "end": 34.38,
+          "startFrame": 2050,
+          "endFrame": 2063,
+          "probability": 0.992
+        },
+        {
+          "id": 109,
+          "word": "kholte",
+          "start": 34.38,
+          "end": 34.82,
+          "startFrame": 2063,
+          "endFrame": 2089,
+          "probability": 0.773
+        },
+        {
+          "id": 110,
+          "word": "hain,",
+          "start": 34.82,
+          "end": 34.98,
+          "startFrame": 2089,
+          "endFrame": 2099,
+          "probability": 0.982
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "to aapka phone server ko ek request bhejta hai.",
+      "start": 34.98,
+      "end": 37.64,
+      "startFrame": 2099,
+      "endFrame": 2258,
+      "words": [
+        {
+          "id": 111,
+          "word": "to",
+          "start": 34.98,
+          "end": 35.5,
+          "startFrame": 2099,
+          "endFrame": 2130,
+          "probability": 0.794
+        },
+        {
+          "id": 112,
+          "word": "aapka",
+          "start": 35.5,
+          "end": 35.74,
+          "startFrame": 2130,
+          "endFrame": 2144,
+          "probability": 0.756
+        },
+        {
+          "id": 113,
+          "word": "phone",
+          "start": 35.74,
+          "end": 35.94,
+          "startFrame": 2144,
+          "endFrame": 2156,
+          "probability": 0.045
+        },
+        {
+          "id": 114,
+          "word": "server",
+          "start": 35.94,
+          "end": 36.36,
+          "startFrame": 2156,
+          "endFrame": 2182,
+          "probability": 0.747
+        },
+        {
+          "id": 115,
+          "word": "ko",
+          "start": 36.36,
+          "end": 36.56,
+          "startFrame": 2182,
+          "endFrame": 2194,
+          "probability": 0.874
+        },
+        {
+          "id": 116,
+          "word": "ek",
+          "start": 36.56,
+          "end": 36.68,
+          "startFrame": 2194,
+          "endFrame": 2201,
+          "probability": 0.618
+        },
+        {
+          "id": 117,
+          "word": "request",
+          "start": 36.68,
+          "end": 37.0,
+          "startFrame": 2201,
+          "endFrame": 2220,
+          "probability": 0.805
+        },
+        {
+          "id": 118,
+          "word": "bhejta",
+          "start": 37.0,
+          "end": 37.52,
+          "startFrame": 2220,
+          "endFrame": 2251,
+          "probability": 0.475
+        },
+        {
+          "id": 119,
+          "word": "hai.",
+          "start": 37.52,
+          "end": 37.64,
+          "startFrame": 2251,
+          "endFrame": 2258,
+          "probability": 0.964
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "API aapki is request ko server tak lejaati hai,",
+      "start": 38.04,
+      "end": 40.8,
+      "startFrame": 2282,
+      "endFrame": 2448,
+      "words": [
+        {
+          "id": 120,
+          "word": "API",
+          "start": 38.04,
+          "end": 38.42,
+          "startFrame": 2282,
+          "endFrame": 2305,
+          "probability": 0.607
+        },
+        {
+          "id": 121,
+          "word": "aapki",
+          "start": 38.42,
+          "end": 38.82,
+          "startFrame": 2305,
+          "endFrame": 2329,
+          "probability": 0.864
+        },
+        {
+          "id": 122,
+          "word": "is",
+          "start": 38.82,
+          "end": 38.92,
+          "startFrame": 2329,
+          "endFrame": 2335,
+          "probability": 0.684
+        },
+        {
+          "id": 123,
+          "word": "request",
+          "start": 38.92,
+          "end": 39.22,
+          "startFrame": 2335,
+          "endFrame": 2353,
+          "probability": 0.826
+        },
+        {
+          "id": 124,
+          "word": "ko",
+          "start": 39.22,
+          "end": 39.5,
+          "startFrame": 2353,
+          "endFrame": 2370,
+          "probability": 0.975
+        },
+        {
+          "id": 125,
+          "word": "server",
+          "start": 39.5,
+          "end": 39.82,
+          "startFrame": 2370,
+          "endFrame": 2389,
+          "probability": 0.966
+        },
+        {
+          "id": 126,
+          "word": "tak",
+          "start": 39.82,
+          "end": 40.08,
+          "startFrame": 2389,
+          "endFrame": 2405,
+          "probability": 0.767
+        },
+        {
+          "id": 127,
+          "word": "lejaati",
+          "start": 40.08,
+          "end": 40.58,
+          "startFrame": 2405,
+          "endFrame": 2435,
+          "probability": 0.855
+        },
+        {
+          "id": 128,
+          "word": "hai,",
+          "start": 40.58,
+          "end": 40.8,
+          "startFrame": 2435,
+          "endFrame": 2448,
+          "probability": 0.982
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "wahan se zaroori data uthati hai,",
+      "start": 41.2,
+      "end": 43.08,
+      "startFrame": 2472,
+      "endFrame": 2585,
+      "words": [
+        {
+          "id": 129,
+          "word": "wahan",
+          "start": 41.2,
+          "end": 41.48,
+          "startFrame": 2472,
+          "endFrame": 2489,
+          "probability": 0.712
+        },
+        {
+          "id": 130,
+          "word": "se",
+          "start": 41.48,
+          "end": 41.62,
+          "startFrame": 2489,
+          "endFrame": 2497,
+          "probability": 0.619
+        },
+        {
+          "id": 131,
+          "word": "zaroori",
+          "start": 41.62,
+          "end": 42.02,
+          "startFrame": 2497,
+          "endFrame": 2521,
+          "probability": 0.658
+        },
+        {
+          "id": 132,
+          "word": "data",
+          "start": 42.02,
+          "end": 42.24,
+          "startFrame": 2521,
+          "endFrame": 2534,
+          "probability": 0.68
+        },
+        {
+          "id": 133,
+          "word": "uthati",
+          "start": 42.24,
+          "end": 42.8,
+          "startFrame": 2534,
+          "endFrame": 2568,
+          "probability": 0.753
+        },
+        {
+          "id": 134,
+          "word": "hai,",
+          "start": 42.8,
+          "end": 43.08,
+          "startFrame": 2568,
+          "endFrame": 2585,
+          "probability": 0.99
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "aur aapki screen par dikhati hai.",
+      "start": 43.42,
+      "end": 44.82,
+      "startFrame": 2605,
+      "endFrame": 2689,
+      "words": [
+        {
+          "id": 135,
+          "word": "aur",
+          "start": 43.42,
+          "end": 43.54,
+          "startFrame": 2605,
+          "endFrame": 2612,
+          "probability": 0.833
+        },
+        {
+          "id": 136,
+          "word": "aapki",
+          "start": 43.54,
+          "end": 43.8,
+          "startFrame": 2612,
+          "endFrame": 2628,
+          "probability": 0.915
+        },
+        {
+          "id": 137,
+          "word": "screen",
+          "start": 43.8,
+          "end": 44.06,
+          "startFrame": 2628,
+          "endFrame": 2644,
+          "probability": 0.849
+        },
+        {
+          "id": 138,
+          "word": "par",
+          "start": 44.06,
+          "end": 44.3,
+          "startFrame": 2644,
+          "endFrame": 2658,
+          "probability": 0.866
+        },
+        {
+          "id": 139,
+          "word": "dikhati",
+          "start": 44.3,
+          "end": 44.72,
+          "startFrame": 2658,
+          "endFrame": 2683,
+          "probability": 0.881
+        },
+        {
+          "id": 140,
+          "word": "hai.",
+          "start": 44.72,
+          "end": 44.82,
+          "startFrame": 2683,
+          "endFrame": 2689,
+          "probability": 0.992
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "Aasaan shabdon mein kahein to,",
+      "start": 45.18,
+      "end": 46.82,
+      "startFrame": 2711,
+      "endFrame": 2809,
+      "words": [
+        {
+          "id": 141,
+          "word": "Aasaan",
+          "start": 45.18,
+          "end": 45.6,
+          "startFrame": 2711,
+          "endFrame": 2736,
+          "probability": 0.836
+        },
+        {
+          "id": 142,
+          "word": "shabdon",
+          "start": 45.6,
+          "end": 45.92,
+          "startFrame": 2736,
+          "endFrame": 2755,
+          "probability": 0.748
+        },
+        {
+          "id": 143,
+          "word": "mein",
+          "start": 45.92,
+          "end": 46.1,
+          "startFrame": 2755,
+          "endFrame": 2766,
+          "probability": 0.861
+        },
+        {
+          "id": 144,
+          "word": "kahein",
+          "start": 46.1,
+          "end": 46.34,
+          "startFrame": 2766,
+          "endFrame": 2780,
+          "probability": 0.711
+        },
+        {
+          "id": 145,
+          "word": "to,",
+          "start": 46.34,
+          "end": 46.82,
+          "startFrame": 2780,
+          "endFrame": 2809,
+          "probability": 0.729
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "API do alag alag software ya apps ke beech ek bridge,",
+      "start": 47.0,
+      "end": 50.56,
+      "startFrame": 2820,
+      "endFrame": 3034,
+      "words": [
+        {
+          "id": 146,
+          "word": "API",
+          "start": 47.0,
+          "end": 47.26,
+          "startFrame": 2820,
+          "endFrame": 2836,
+          "probability": 0.861
+        },
+        {
+          "id": 147,
+          "word": "do",
+          "start": 47.26,
+          "end": 47.8,
+          "startFrame": 2836,
+          "endFrame": 2868,
+          "probability": 0.486
+        },
+        {
+          "id": 148,
+          "word": "alag",
+          "start": 47.8,
+          "end": 48.1,
+          "startFrame": 2868,
+          "endFrame": 2886,
+          "probability": 0.716
+        },
+        {
+          "id": 149,
+          "word": "alag",
+          "start": 48.1,
+          "end": 48.32,
+          "startFrame": 2886,
+          "endFrame": 2899,
+          "probability": 0.296
+        },
+        {
+          "id": 150,
+          "word": "software",
+          "start": 48.32,
+          "end": 48.76,
+          "startFrame": 2899,
+          "endFrame": 2926,
+          "probability": 0.902
+        },
+        {
+          "id": 151,
+          "word": "ya",
+          "start": 48.76,
+          "end": 49.16,
+          "startFrame": 2926,
+          "endFrame": 2950,
+          "probability": 0.86
+        },
+        {
+          "id": 152,
+          "word": "apps",
+          "start": 49.16,
+          "end": 49.48,
+          "startFrame": 2950,
+          "endFrame": 2969,
+          "probability": 0.884
+        },
+        {
+          "id": 153,
+          "word": "ke",
+          "start": 49.48,
+          "end": 49.72,
+          "startFrame": 2969,
+          "endFrame": 2983,
+          "probability": 0.939
+        },
+        {
+          "id": 154,
+          "word": "beech",
+          "start": 49.72,
+          "end": 50.0,
+          "startFrame": 2983,
+          "endFrame": 3000,
+          "probability": 0.808
+        },
+        {
+          "id": 155,
+          "word": "ek",
+          "start": 50.0,
+          "end": 50.1,
+          "startFrame": 3000,
+          "endFrame": 3006,
+          "probability": 0.582
+        },
+        {
+          "id": 156,
+          "word": "bridge,",
+          "start": 50.1,
+          "end": 50.56,
+          "startFrame": 3006,
+          "endFrame": 3034,
+          "probability": 0.676
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "yaani pul ka kaam karti hai,",
+      "start": 50.68,
+      "end": 52.08,
+      "startFrame": 3041,
+      "endFrame": 3125,
+      "words": [
+        {
+          "id": 157,
+          "word": "yaani",
+          "start": 50.68,
+          "end": 50.78,
+          "startFrame": 3041,
+          "endFrame": 3047,
+          "probability": 0.761
+        },
+        {
+          "id": 158,
+          "word": "pul",
+          "start": 50.78,
+          "end": 51.2,
+          "startFrame": 3047,
+          "endFrame": 3072,
+          "probability": 0.444
+        },
+        {
+          "id": 159,
+          "word": "ka",
+          "start": 51.2,
+          "end": 51.34,
+          "startFrame": 3072,
+          "endFrame": 3080,
+          "probability": 0.933
+        },
+        {
+          "id": 160,
+          "word": "kaam",
+          "start": 51.34,
+          "end": 51.58,
+          "startFrame": 3080,
+          "endFrame": 3095,
+          "probability": 0.794
+        },
+        {
+          "id": 161,
+          "word": "karti",
+          "start": 51.58,
+          "end": 51.92,
+          "startFrame": 3095,
+          "endFrame": 3115,
+          "probability": 0.918
+        },
+        {
+          "id": 162,
+          "word": "hai,",
+          "start": 51.92,
+          "end": 52.08,
+          "startFrame": 3115,
+          "endFrame": 3125,
+          "probability": 0.988
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "jis se woh aapas mein baat kar paate hain,",
+      "start": 52.08,
+      "end": 54.12,
+      "startFrame": 3125,
+      "endFrame": 3247,
+      "words": [
+        {
+          "id": 163,
+          "word": "jis",
+          "start": 52.08,
+          "end": 52.6,
+          "startFrame": 3125,
+          "endFrame": 3156,
+          "probability": 0.819
+        },
+        {
+          "id": 164,
+          "word": "se",
+          "start": 52.6,
+          "end": 52.7,
+          "startFrame": 3156,
+          "endFrame": 3162,
+          "probability": 0.461
+        },
+        {
+          "id": 165,
+          "word": "woh",
+          "start": 52.7,
+          "end": 52.8,
+          "startFrame": 3162,
+          "endFrame": 3168,
+          "probability": 0.533
+        },
+        {
+          "id": 166,
+          "word": "aapas",
+          "start": 52.8,
+          "end": 53.1,
+          "startFrame": 3168,
+          "endFrame": 3186,
+          "probability": 0.877
+        },
+        {
+          "id": 167,
+          "word": "mein",
+          "start": 53.1,
+          "end": 53.24,
+          "startFrame": 3186,
+          "endFrame": 3194,
+          "probability": 0.908
+        },
+        {
+          "id": 168,
+          "word": "baat",
+          "start": 53.24,
+          "end": 53.5,
+          "startFrame": 3194,
+          "endFrame": 3210,
+          "probability": 0.873
+        },
+        {
+          "id": 169,
+          "word": "kar",
+          "start": 53.5,
+          "end": 53.68,
+          "startFrame": 3210,
+          "endFrame": 3221,
+          "probability": 0.896
+        },
+        {
+          "id": 170,
+          "word": "paate",
+          "start": 53.68,
+          "end": 54.0,
+          "startFrame": 3221,
+          "endFrame": 3240,
+          "probability": 0.542
+        },
+        {
+          "id": 171,
+          "word": "hain,",
+          "start": 54.0,
+          "end": 54.12,
+          "startFrame": 3240,
+          "endFrame": 3247,
+          "probability": 0.946
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "aur data share kar paate hain.",
+      "start": 54.2,
+      "end": 55.46,
+      "startFrame": 3252,
+      "endFrame": 3328,
+      "words": [
+        {
+          "id": 172,
+          "word": "aur",
+          "start": 54.2,
+          "end": 54.34,
+          "startFrame": 3252,
+          "endFrame": 3260,
+          "probability": 0.797
+        },
+        {
+          "id": 173,
+          "word": "data",
+          "start": 54.34,
+          "end": 54.64,
+          "startFrame": 3260,
+          "endFrame": 3278,
+          "probability": 0.693
+        },
+        {
+          "id": 174,
+          "word": "share",
+          "start": 54.64,
+          "end": 54.86,
+          "startFrame": 3278,
+          "endFrame": 3292,
+          "probability": 0.78
+        },
+        {
+          "id": 175,
+          "word": "kar",
+          "start": 54.86,
+          "end": 55.04,
+          "startFrame": 3292,
+          "endFrame": 3302,
+          "probability": 0.969
+        },
+        {
+          "id": 176,
+          "word": "paate",
+          "start": 55.04,
+          "end": 55.34,
+          "startFrame": 3302,
+          "endFrame": 3320,
+          "probability": 0.926
+        },
+        {
+          "id": 177,
+          "word": "hain.",
+          "start": 55.34,
+          "end": 55.46,
+          "startFrame": 3320,
+          "endFrame": 3328,
+          "probability": 0.988
+        }
+      ]
+    }
+  ],
+  "pauses": [
+    {
+      "afterWordId": 11,
+      "afterWord": "hai?",
+      "start": 3.82,
+      "end": 4.3,
+      "duration": 0.48,
+      "startFrame": 229,
+      "endFrame": 258
+    },
+    {
+      "afterWordId": 19,
+      "afterWord": "Interface.",
+      "start": 7.46,
+      "end": 8.14,
+      "duration": 0.68,
+      "startFrame": 448,
+      "endFrame": 488
+    },
+    {
+      "afterWordId": 29,
+      "afterWord": "hain.",
+      "start": 10.82,
+      "end": 11.2,
+      "duration": 0.38,
+      "startFrame": 649,
+      "endFrame": 672
+    },
+    {
+      "afterWordId": 46,
+      "afterWord": "hai.",
+      "start": 15.72,
+      "end": 16.14,
+      "duration": 0.42,
+      "startFrame": 943,
+      "endFrame": 968
+    },
+    {
+      "afterWordId": 71,
+      "afterWord": "hai,",
+      "start": 23.24,
+      "end": 23.64,
+      "duration": 0.4,
+      "startFrame": 1394,
+      "endFrame": 1418
+    },
+    {
+      "afterWordId": 83,
+      "afterWord": "hai.",
+      "start": 26.34,
+      "end": 26.94,
+      "duration": 0.6,
+      "startFrame": 1580,
+      "endFrame": 1616
+    },
+    {
+      "afterWordId": 96,
+      "afterWord": "hai.",
+      "start": 31.02,
+      "end": 31.44,
+      "duration": 0.42,
+      "startFrame": 1861,
+      "endFrame": 1886
+    },
+    {
+      "afterWordId": 119,
+      "afterWord": "hai.",
+      "start": 37.64,
+      "end": 38.04,
+      "duration": 0.4,
+      "startFrame": 2258,
+      "endFrame": 2282
+    },
+    {
+      "afterWordId": 128,
+      "afterWord": "hai,",
+      "start": 40.8,
+      "end": 41.2,
+      "duration": 0.4,
+      "startFrame": 2448,
+      "endFrame": 2472
+    },
+    {
+      "afterWordId": 140,
+      "afterWord": "hai.",
+      "start": 44.82,
+      "end": 45.18,
+      "duration": 0.36,
+      "startFrame": 2689,
+      "endFrame": 2711
+    }
+  ]
+}

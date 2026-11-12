@@ -1,0 +1,113 @@
+{
+  "slug": "demo-cache-stampede",
+  "fps": 60,
+  "width": 1080,
+  "height": 1920,
+  "audioFile": "projects/demo-cache-stampede/voice.wav",
+  "theme": "midnight-dev",
+  "showSafeZones": false,
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "concept-card",
+      "start": 0.0,
+      "end": 2.75,
+      "eyebrow": "SYSTEM DESIGN // 60 FPS",
+      "badge": "TTL = 0",
+      "title": "What happens when a hot Redis key expires?",
+      "subtitle": "At high QPS, one expired key can take down your entire primary database.",
+      "variant": "alert",
+      "sfx": "whoosh"
+    },
+    {
+      "id": "stampede-diagram",
+      "type": "arch-diagram",
+      "start": 2.75,
+      "end": 8.5,
+      "cuePhrase": "Thousands of requests",
+      "title": "The Cache Stampede",
+      "subtitle": "All concurrent misses bypass Redis simultaneously",
+      "sfx": "pop",
+      "nodes": [
+        {
+          "id": "clients",
+          "label": "10k Requests",
+          "sublabel": "concurrent GET /user",
+          "icon": "client",
+          "x": 50,
+          "y": 18,
+          "appearAtOffset": 0.0,
+          "status": "active"
+        },
+        {
+          "id": "redis",
+          "label": "Redis Cache",
+          "sublabel": "KEY EXPIRED (MISS)",
+          "icon": "cache",
+          "x": 50,
+          "y": 50,
+          "cuePhrase": "miss the cache",
+          "status": "warning"
+        },
+        {
+          "id": "postgres",
+          "label": "Postgres Primary",
+          "sublabel": "CPU 100% OVERLOAD",
+          "icon": "database",
+          "x": 50,
+          "y": 82,
+          "cuePhrase": "slam your database",
+          "status": "warning"
+        }
+      ],
+      "edges": [
+        {
+          "from": "clients",
+          "to": "redis",
+          "label": "10,000 req/s",
+          "appearAtOffset": 0.25,
+          "animatePacket": true,
+          "color": "accent"
+        },
+        {
+          "from": "redis",
+          "to": "postgres",
+          "label": "10,000 SQL queries!",
+          "cuePhrase": "slam your database",
+          "animatePacket": true,
+          "color": "danger"
+        }
+      ]
+    },
+    {
+      "id": "singleflight-code",
+      "type": "code-stepper",
+      "start": 8.5,
+      "end": 14.0,
+      "cuePhrase": "Fix it with",
+      "title": "Coalesce In-Flight Queries",
+      "filename": "cache_service.go",
+      "language": "go",
+      "sfx": "click",
+      "code": "var group singleflight.Group\n\nfunc GetUser(id string) (*User, error) {\n  val, err, shared := group.Do(id, func() (any, error) {\n    return db.QueryUser(id)\n  })\n  return val.(*User), err\n}",
+      "steps": [
+        {
+          "atOffset": 0.0,
+          "lines": [1],
+          "caption": "1. Deduplicate identical keys in-flight"
+        },
+        {
+          "cuePhrase": "only one request",
+          "lines": [4, 5, 6],
+          "caption": "2. Only 1 goroutine hits Postgres"
+        },
+        {
+          "cuePhrase": "shares the result",
+          "lines": [4, 7],
+          "caption": "3. Waiters share the same result"
+        }
+      ]
+    }
+  ]
+}
+

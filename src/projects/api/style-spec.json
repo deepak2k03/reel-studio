@@ -1,0 +1,38 @@
+{
+  "id": "api-bridge",
+  "name": "API Bridge (60fps Explainer)",
+  "notes": "Pacing tuned to 55.68s (11 spoken beats, ~5.1s avg beat). Uses cyan for API/requests, amber for highlights/waiter analogy, emerald for responses, rose for blocked direct access.",
+  "colors": {
+    "bg": "#070B14",
+    "bgSecondary": "#0F172A",
+    "surface": "rgba(15, 23, 42, 0.9)",
+    "surfaceBorder": "rgba(56, 189, 248, 0.28)",
+    "text": "#F8FAFC",
+    "muted": "#94A3B8",
+    "accent": "#22D3EE",
+    "accentSoft": "rgba(34, 211, 238, 0.16)",
+    "success": "#34D399",
+    "danger": "#FB7185",
+    "captionHighlight": "#FBBF24"
+  },
+  "typography": {
+    "displayFont": "Space Grotesk, Inter, Segoe UI, system-ui, sans-serif",
+    "monoFont": "JetBrains Mono, Cascadia Code, Consolas, monospace",
+    "titleSize": 58,
+    "bodySize": 34,
+    "codeSize": 25,
+    "captionSize": 50
+  },
+  "motion": {
+    "springDamping": 16,
+    "springStiffness": 200,
+    "springMass": 0.82
+  },
+  "safeZone": {
+    "top": 140,
+    "bottom": 360,
+    "left": 72,
+    "right": 120
+  }
+}
+
