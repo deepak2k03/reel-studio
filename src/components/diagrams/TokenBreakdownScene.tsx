@@ -48,6 +48,7 @@ export const TokenBreakdownScene: React.FC<TokenBreakdownSceneProps> = ({
             transcript,
             sceneStartSec + (item.atOffset ?? defaultOffset),
             item.cuePhrase,
+            sceneStartSec,
           ),
           fps,
         )

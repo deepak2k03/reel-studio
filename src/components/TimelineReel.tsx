@@ -1,24 +1,43 @@
 import React from "react";
-import { AbsoluteFill, Audio, Sequence, staticFile, useVideoConfig } from "remotion";
+import {
+  AbsoluteFill,
+  Audio,
+  Easing,
+  Loop,
+  Sequence,
+  interpolate,
+  staticFile,
+  useCurrentFrame,
+  useVideoConfig,
+} from "remotion";
+import { CUSTOM_SCENES } from "../custom-scenes/registry";
 import { getTheme } from "../lib/themes";
 import { resolveCueTime, secToFrame } from "../lib/timing";
-import type { StyleSpec, TimelineData, TimelineScene, TranscriptData } from "../lib/types";
+import type {
+  SceneCameraMode,
+  SceneTransitionKind,
+  StyleSpec,
+  TimelineData,
+  TimelineScene,
+  TranscriptData,
+} from "../lib/types";
 import { ArchDiagram } from "./ArchDiagram";
+import { CameraRig } from "./CameraRig";
 import { CodeStepper } from "./CodeStepper";
 import { ConceptCard } from "./ConceptCard";
 import { KeypointsCard } from "./KeypointsCard";
 import { KineticCaptions } from "./KineticCaptions";
 import { ReelBackground } from "./ReelBackground";
+import { VoiceReactiveCanvas } from "./VoiceReactiveCanvas";
 import { TerminalCard } from "./TerminalCard";
-import { HeroVisualScene } from "./visuals/HeroVisualScene";
-import { MetricCompareScene } from "./visuals/MetricCompareScene";
-import { VisualFlowScene } from "./visuals/VisualFlowScene";
 import { BridgeArchitectureScene } from "./diagrams/BridgeArchitectureScene";
 import { ClientApiServerScene } from "./diagrams/ClientApiServerScene";
 import { RestaurantMetaphorScene } from "./diagrams/RestaurantMetaphorScene";
 import { SequenceDiagramScene } from "./diagrams/SequenceDiagramScene";
 import { TokenBreakdownScene } from "./diagrams/TokenBreakdownScene";
-import { CUSTOM_SCENES } from "../custom-scenes/registry";
+import { HeroVisualScene } from "./visuals/HeroVisualScene";
+import { MetricCompareScene } from "./visuals/MetricCompareScene";
+import { VisualFlowScene } from "./visuals/VisualFlowScene";
 
 export type TimelineReelProps = {
   timeline: TimelineData;
@@ -26,6 +45,94 @@ export type TimelineReelProps = {
   styleSpec?: StyleSpec;
   showSafeZones?: boolean;
   mediaBaseUrl?: string;
+};
+
+const TRANSITION_OVERLAP_FRAMES = 10;
+
+interface SceneMotionStageProps {
+  baseDuration: number;
+  hasNext: boolean;
+  isFirst: boolean;
+  transition: SceneTransitionKind;
+  camera: SceneCameraMode;
+  children: React.ReactNode;
+}
+
+const SceneMotionStage: React.FC<SceneMotionStageProps> = ({
+  baseDuration,
+  hasNext,
+  isFirst,
+  transition,
+  camera,
+  children,
+}) => {
+  const frame = useCurrentFrame();
+
+  const enterFrames = isFirst || transition === "none" ? 1 : 11;
+  const exitFrames = hasNext && transition !== "none" ? TRANSITION_OVERLAP_FRAMES : 0;
+
+  const enterProg =
+    enterFrames <= 1
+      ? 1
+      : interpolate(frame, [0, enterFrames], [0, 1], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+          easing: Easing.out(Easing.cubic),
+        });
+
+  const exitProg =
+    exitFrames <= 0
+      ? 0
+      : interpolate(
+          frame,
+          [Math.max(0, baseDuration - 2), baseDuration + exitFrames],
+          [0, 1],
+          {
+            extrapolateLeft: "clamp",
+            extrapolateRight: "clamp",
+            easing: Easing.inOut(Easing.cubic),
+          },
+        );
+
+  const opacity = enterProg * (1 - exitProg);
+  let translateY = 0;
+  let scale = 1;
+
+  if (transition === "slide-up") {
+    translateY = (1 - enterProg) * 24 - exitProg * 16;
+    scale = 1 - exitProg * 0.015;
+  } else if (transition === "zoom") {
+    scale = 0.96 + 0.04 * enterProg - exitProg * 0.02;
+  }
+
+  const content = (
+    <AbsoluteFill
+      style={{
+        opacity,
+        transform: `translateY(${translateY}px) scale(${scale})`,
+      }}
+    >
+      {children}
+    </AbsoluteFill>
+  );
+
+  if (camera === "none") {
+    return content;
+  }
+
+  const cameraEndScale = camera === "pull-out" ? 1.0 : 1.032;
+  const cameraStartScale = camera === "pull-out" ? 1.045 : 1.0;
+
+  return (
+    <CameraRig
+      keyframes={[
+        { frame: 0, scale: cameraStartScale },
+        { frame: Math.max(2, baseDuration), scale: cameraEndScale },
+      ]}
+    >
+      {content}
+    </CameraRig>
+  );
 };
 
 const renderScene = (
@@ -112,6 +219,20 @@ export const TimelineReel: React.FC<TimelineReelProps> = ({
       : staticFile(timeline.audioFile)
     : null;
 
+  const ambientEnabled = timeline.ambientAudio !== false;
+  const rawAmbientFile =
+    typeof timeline.ambientAudio === "object" && timeline.ambientAudio.file
+      ? timeline.ambientAudio.file
+      : "sfx/ambient-warm.wav";
+  const ambientFile =
+    rawAmbientFile.startsWith("sfx/") || rawAmbientFile.startsWith("/")
+      ? rawAmbientFile
+      : `sfx/${rawAmbientFile}`;
+  const ambientVolume =
+    typeof timeline.ambientAudio === "object" && timeline.ambientAudio.volume !== undefined
+      ? timeline.ambientAudio.volume
+      : 0.038;
+
   return (
     <AbsoluteFill>
       <ReelBackground
@@ -119,29 +240,81 @@ export const TimelineReel: React.FC<TimelineReelProps> = ({
         showSafeZones={showSafeZones || timeline.showSafeZones}
       />
 
+      {/* Soothing voice-reactive continuous ambient canvas */}
+      <VoiceReactiveCanvas words={transcript.words} theme={theme} />
+
       {/* Primary voiceover track */}
       {audioSrc && <Audio src={audioSrc} />}
 
-      {/* Voice-synced scenes */}
-      {resolvedScenes.map(({ scene, startFrame }, index) => {
+      {/* Subtle studio ambient bed underneath voiceover */}
+      {ambientEnabled && (
+        <Loop durationInFrames={480}>
+          <Audio src={staticFile(ambientFile)} volume={ambientVolume} />
+        </Loop>
+      )}
+
+      {/* Voice-synced scenes with smooth overlap transitions & subtle camera push */}
+      {resolvedScenes.map(({ scene, startSec, startFrame }, index) => {
         const nextScene = resolvedScenes[index + 1];
         const explicitEndFrame = secToFrame(scene.end, fps);
         const endFrame = nextScene
           ? Math.min(explicitEndFrame, nextScene.startFrame)
           : Math.max(explicitEndFrame, durationInFrames);
-        const duration = Math.max(1, endFrame - startFrame);
+        const baseDuration = Math.max(1, endFrame - startFrame);
+
+        const transition: SceneTransitionKind = scene.transition ?? "slide-up";
+        const camera: SceneCameraMode = scene.camera ?? "push-in";
+        const overlap = nextScene && transition !== "none" ? TRANSITION_OVERLAP_FRAMES : 0;
 
         return (
           <React.Fragment key={scene.id}>
-            <Sequence from={startFrame} durationInFrames={duration}>
-              {renderScene(scene, transcript, theme, mediaBaseUrl)}
+            <Sequence from={startFrame} durationInFrames={baseDuration + overlap}>
+              <SceneMotionStage
+                baseDuration={baseDuration}
+                hasNext={Boolean(nextScene)}
+                isFirst={index === 0}
+                transition={transition}
+                camera={camera}
+              >
+                {renderScene(scene, transcript, theme, mediaBaseUrl)}
+              </SceneMotionStage>
             </Sequence>
 
             {scene.sfx && scene.sfx !== "none" && (
-              <Sequence from={startFrame} durationInFrames={Math.min(45, duration)}>
-                <Audio src={staticFile(`sfx/${scene.sfx}.wav`)} volume={0.38} />
+              <Sequence from={startFrame} durationInFrames={Math.min(45, baseDuration)}>
+                <Audio src={staticFile(`sfx/${scene.sfx}.wav`)} volume={0.34} />
               </Sequence>
             )}
+
+            {(scene.sfxCues ?? []).map((rawCue, cueIdx) => {
+              const cue = rawCue as { kind?: string; type?: string; atOffset?: number; cuePhrase?: string; volume?: number };
+              const sfxKind = cue.kind ?? cue.type;
+              if (!sfxKind || sfxKind === "none") {
+                return null;
+              }
+              const cueSec = resolveCueTime(
+                transcript,
+                startSec + (cue.atOffset ?? 0),
+                cue.cuePhrase,
+                startSec,
+              );
+              const cueFrame = secToFrame(cueSec, fps);
+              if (cueFrame < startFrame || cueFrame >= endFrame) {
+                return null;
+              }
+              return (
+                <Sequence
+                  key={`${scene.id}-sfx-${cueIdx}`}
+                  from={cueFrame}
+                  durationInFrames={Math.min(45, Math.max(10, endFrame - cueFrame))}
+                >
+                  <Audio
+                    src={staticFile(`sfx/${sfxKind}.wav`)}
+                    volume={cue.volume ?? 0.32}
+                  />
+                </Sequence>
+              );
+            })}
           </React.Fragment>
         );
       })}

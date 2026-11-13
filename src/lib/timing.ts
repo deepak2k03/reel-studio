@@ -13,7 +13,7 @@ export function frameToSec(frame: number, fps: number = REELS_FPS): number {
 }
 
 function normalizeToken(value: string): string {
-  return value.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return value.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
 }
 
 /**
@@ -24,6 +24,7 @@ export function findCueTime(
   transcript: TranscriptData,
   phrase: string,
   occurrence: number = 0,
+  minSec: number = 0,
 ): number | null {
   const tokens = phrase
     .split(/\s+/)
@@ -36,6 +37,9 @@ export function findCueTime(
 
   let hits = 0;
   for (let i = 0; i <= transcript.words.length - tokens.length; i++) {
+    if (minSec > 0 && transcript.words[i].start < minSec - 0.05) {
+      continue;
+    }
     let matched = true;
     for (let j = 0; j < tokens.length; j++) {
       if (normalizeToken(transcript.words[i + j].word) !== tokens[j]) {
@@ -57,11 +61,12 @@ export function resolveCueTime(
   transcript: TranscriptData,
   fallbackSec: number,
   cuePhrase?: string,
+  minSec: number = 0,
 ): number {
   if (!cuePhrase) {
     return fallbackSec;
   }
-  return findCueTime(transcript, cuePhrase) ?? fallbackSec;
+  return findCueTime(transcript, cuePhrase, 0, minSec) ?? fallbackSec;
 }
 
 export interface CaptionChunk {

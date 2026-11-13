@@ -8,6 +8,9 @@ interface KineticCaptionsProps {
   theme: StyleSpec;
 }
 
+const EMPHASIS_TOKEN_RE =
+  /^(?:\d+(?:\.\d+)?(?:ms|s|%|°[cf]|x|gb|mb|kb)?|#[0-9]+|api|jwt|sql|json|http|https|tcp|dns|cdn|crud|rest|redis|docker|kafka|200)$/i;
+
 export const KineticCaptions: React.FC<KineticCaptionsProps> = ({
   words,
   theme,
@@ -42,6 +45,8 @@ export const KineticCaptions: React.FC<KineticCaptionsProps> = ({
     (startedWords.length > 0 ? startedWords[startedWords.length - 1].id : null);
 
   const isDark = theme.meta?.isDark ?? true;
+  const captionStyle = theme.typography.captionStyle ?? "auto";
+  const showPill = captionStyle === "pill" || (captionStyle === "auto" && isDark);
 
   return (
     <AbsoluteFill
@@ -60,11 +65,15 @@ export const KineticCaptions: React.FC<KineticCaptionsProps> = ({
           flexWrap: "wrap",
           justifyContent: "center",
           gap: "12px 20px",
-          padding: isDark ? "16px 28px" : "8px 16px",
+          padding: showPill ? "16px 28px" : "8px 16px",
           borderRadius: 20,
-          backgroundColor: isDark ? "rgba(9, 13, 22, 0.82)" : "transparent",
-          border: isDark ? `1px solid ${theme.colors.surfaceBorder}` : "none",
-          boxShadow: isDark ? "0 18px 42px rgba(0, 0, 0, 0.45)" : "none",
+          backgroundColor: showPill
+            ? isDark
+              ? "rgba(9, 13, 22, 0.82)"
+              : "rgba(255, 255, 255, 0.92)"
+            : "transparent",
+          border: showPill ? `1px solid ${theme.colors.surfaceBorder}` : "none",
+          boxShadow: showPill ? "0 18px 42px rgba(0, 0, 0, 0.35)" : "none",
           transform: `scale(${0.92 + 0.08 * popProgress}) translateY(${(1 - popProgress) * 14}px)`,
           opacity: popProgress,
           maxWidth: 880,
@@ -73,14 +82,16 @@ export const KineticCaptions: React.FC<KineticCaptionsProps> = ({
         {activeChunk.words.map((w) => {
           const isCurrent = w.id === currentWordId;
           const isSpoken = currentSec > w.end && !isCurrent;
+          const cleanWord = w.word.replace(/[^a-zA-Z0-9%°#]/g, "");
+          const isKeyTerm = EMPHASIS_TOKEN_RE.test(cleanWord);
 
           return (
             <span
               key={w.id}
               style={{
                 fontFamily: theme.typography.displayFont,
-                fontSize: isDark ? theme.typography.captionSize : theme.typography.captionSize + 6,
-                fontWeight: 800,
+                fontSize: showPill ? theme.typography.captionSize : theme.typography.captionSize + 6,
+                fontWeight: isKeyTerm || isCurrent ? 800 : 700,
                 lineHeight: 1.15,
                 letterSpacing: "-0.015em",
                 padding: "0 2px",
@@ -91,12 +102,17 @@ export const KineticCaptions: React.FC<KineticCaptionsProps> = ({
                     : isDark
                       ? "rgba(248, 250, 252, 0.58)"
                       : "rgba(30, 25, 21, 0.42)",
-                transform: isCurrent ? "scale(1.05)" : "scale(1)",
-                textShadow: isDark
-                  ? isCurrent
-                    ? `0 0 22px ${theme.colors.accentSoft}`
-                    : "0 2px 10px rgba(0,0,0,0.65)"
-                  : "none",
+                borderBottom:
+                  isSpoken && isKeyTerm && !isCurrent
+                    ? `3px solid ${theme.colors.accent}88`
+                    : "3px solid transparent",
+                transform: isCurrent ? "scale(1.06)" : "scale(1)",
+                textShadow:
+                  isDark && showPill
+                    ? isCurrent
+                      ? `0 0 22px ${theme.colors.accentSoft}`
+                      : "0 2px 10px rgba(0,0,0,0.65)"
+                    : "none",
                 display: "inline-block",
               }}
             >
@@ -108,4 +124,3 @@ export const KineticCaptions: React.FC<KineticCaptionsProps> = ({
     </AbsoluteFill>
   );
 };
-

@@ -132,19 +132,30 @@ def transcribe_words(
         ) from exc
 
     try:
-        model = WhisperModel(model_size, device="cpu", compute_type="int8")
+        model = WhisperModel(
+            model_size,
+            device="cpu",
+            compute_type="int8",
+            cpu_threads=8,
+            local_files_only=True,
+        )
     except Exception:
         model = WhisperModel(
-            model_size, device="cpu", compute_type="int8", local_files_only=True
+            model_size,
+            device="cpu",
+            compute_type="int8",
+            cpu_threads=8,
         )
 
     audio_samples = load_whisper_audio(wav_path)
     segments_iter, info = model.transcribe(
         audio_samples,
         language=language,
+        beam_size=1,
+        best_of=1,
         word_timestamps=True,
-        vad_filter=True,
-        vad_parameters={"min_silence_duration_ms": 300},
+        vad_filter=False,
+        condition_on_previous_text=False,
     )
 
     words: list[dict] = []

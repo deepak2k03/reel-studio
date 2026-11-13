@@ -62,6 +62,8 @@ export interface StyleSpec {
     bodySize: number;
     codeSize: number;
     captionSize: number;
+    fontPreset?: "editorial-sans" | "editorial-serif" | "tech-mono";
+    captionStyle?: "auto" | "bare" | "pill";
   };
   motion: {
     springDamping: number;
@@ -97,7 +99,7 @@ export interface ConceptSceneConfig {
   subtitle?: string;
   badge?: string;
   variant?: "default" | "alert" | "success";
-  sfx?: "pop" | "whoosh" | "click" | "none";
+  sfx?: SfxKind;
 }
 
 export interface CodeHighlightStep {
@@ -119,7 +121,7 @@ export interface CodeSceneConfig {
   language: string;
   code: string;
   steps?: CodeHighlightStep[];
-  sfx?: "pop" | "whoosh" | "click" | "none";
+  sfx?: SfxKind;
 }
 
 export interface ArchNode {
@@ -156,7 +158,7 @@ export interface ArchSceneConfig {
   subtitle?: string;
   nodes: ArchNode[];
   edges: ArchEdge[];
-  sfx?: "pop" | "whoosh" | "click" | "none";
+  sfx?: SfxKind;
 }
 
 export interface TerminalLine {
@@ -174,7 +176,7 @@ export interface TerminalSceneConfig {
   cuePhrase?: string;
   title?: string;
   lines: TerminalLine[];
-  sfx?: "pop" | "whoosh" | "click" | "none";
+  sfx?: SfxKind;
 }
 
 export interface KeypointItem {
@@ -193,7 +195,7 @@ export interface KeypointsSceneConfig {
   eyebrow?: string;
   title: string;
   items: KeypointItem[];
-  sfx?: "pop" | "whoosh" | "click" | "none";
+  sfx?: SfxKind;
 }
 
 export interface HeroVisualSceneConfig {
@@ -208,7 +210,7 @@ export interface HeroVisualSceneConfig {
   heroIcon: string;
   orbitIcons?: string[];
   accentVariant?: "accent" | "success" | "danger";
-  sfx?: "pop" | "whoosh" | "click" | "none";
+  sfx?: SfxKind;
 }
 
 export interface VisualFlowNode {
@@ -239,7 +241,7 @@ export interface VisualFlowSceneConfig {
   title: string;
   nodes: VisualFlowNode[];
   edges: VisualFlowEdge[];
-  sfx?: "pop" | "whoosh" | "click" | "none";
+  sfx?: SfxKind;
 }
 
 export interface MetricSide {
@@ -264,7 +266,7 @@ export interface MetricCompareSceneConfig {
   centerIcon?: string;
   left: MetricSide;
   right: MetricSide;
-  sfx?: "pop" | "whoosh" | "click" | "none";
+  sfx?: SfxKind;
 }
 
 export interface TokenBreakdownItem {
@@ -284,7 +286,7 @@ export interface TokenBreakdownSceneConfig {
   eyebrow?: string;
   title: string;
   items: TokenBreakdownItem[];
-  sfx?: "pop" | "whoosh" | "click" | "none";
+  sfx?: SfxKind;
 }
 
 export interface ClientApiServerSceneConfig {
@@ -310,7 +312,7 @@ export interface ClientApiServerSceneConfig {
   carryCue?: string;
   dataCue?: string;
   screenCue?: string;
-  sfx?: "pop" | "whoosh" | "click" | "none";
+  sfx?: SfxKind;
 }
 
 export interface SequenceActor {
@@ -339,7 +341,7 @@ export interface SequenceDiagramSceneConfig {
   title: string;
   actors: SequenceActor[];
   steps: SequenceStep[];
-  sfx?: "pop" | "whoosh" | "click" | "none";
+  sfx?: SfxKind;
 }
 
 export interface BridgeArchitectureSceneConfig {
@@ -356,7 +358,7 @@ export interface BridgeArchitectureSceneConfig {
   packets: [string, string];
   talkCue?: string;
   shareCue?: string;
-  sfx?: "pop" | "whoosh" | "click" | "none";
+  sfx?: SfxKind;
 }
 
 export interface RestaurantMetaphorSceneConfig {
@@ -372,7 +374,7 @@ export interface RestaurantMetaphorSceneConfig {
   takeOrderCue?: string;
   chefTellCue?: string;
   foodReadyCue?: string;
-  sfx?: "pop" | "whoosh" | "click" | "none";
+  sfx?: SfxKind;
 }
 
 export interface CustomSceneConfig {
@@ -385,10 +387,27 @@ export interface CustomSceneConfig {
   eyebrow?: string;
   title?: string;
   props?: Record<string, unknown>;
-  sfx?: "pop" | "whoosh" | "click" | "none";
+  sfx?: SfxKind;
 }
 
-export type TimelineScene =
+export type SceneTransitionKind = "fade" | "slide-up" | "zoom" | "none";
+export type SceneCameraMode = "push-in" | "pull-out" | "none";
+export type SfxKind = "pop" | "whoosh" | "click" | "chime" | "tick" | "alert" | "none";
+
+export interface SfxCueConfig {
+  kind: Exclude<SfxKind, "none">;
+  atOffset?: number;
+  cuePhrase?: string;
+  volume?: number;
+}
+
+export interface SceneMotionMeta {
+  transition?: SceneTransitionKind;
+  camera?: SceneCameraMode;
+  sfxCues?: SfxCueConfig[];
+}
+
+export type TimelineScene = (
   | ConceptSceneConfig
   | CodeSceneConfig
   | ArchSceneConfig
@@ -402,7 +421,9 @@ export type TimelineScene =
   | SequenceDiagramSceneConfig
   | BridgeArchitectureSceneConfig
   | RestaurantMetaphorSceneConfig
-  | CustomSceneConfig;
+  | CustomSceneConfig
+) &
+  SceneMotionMeta;
 
 export interface TimelineData {
   slug: string;
@@ -412,6 +433,7 @@ export interface TimelineData {
   audioFile: string;
   theme: string;
   showSafeZones?: boolean;
+  ambientAudio?: boolean | { file?: string; volume?: number };
   scenes: TimelineScene[];
 }
 

@@ -83,6 +83,14 @@ const TECH_ENTITIES: DetectedEntity[] = [
   { id: "mysql", pattern: /\b(mysql)\b/i, icon: "mysql", label: "MySQL", tag: "SQL Store", tone: "success", layer: 5 },
   { id: "database", pattern: /\b(database|db|sql|data|storage|index|table|query)\b|डाटा|डेटा/i, icon: "database", label: "Database", tag: "Storage", tone: "success", layer: 5 },
   { id: "github", pattern: /\b(git|github|repo|commit|ci|cd|deploy)\b/i, icon: "github", label: "Git & CI/CD", tag: "Source", tone: "neutral", layer: 5 },
+  { id: "loadbalancer", pattern: /\b(load balancer|balancer|round robin|reverse proxy)\b/i, icon: "loadbalancer", label: "Load Balancer", tag: "Traffic Split", tone: "active", layer: 2 },
+  { id: "lock", pattern: /\b(lock|mutex|concurrency|race condition|atomic|deadlock)\b/i, icon: "lock", label: "Mutex Lock", tag: "Synchronization", tone: "warning", layer: 2 },
+  { id: "eventloop", pattern: /\b(event loop|libuv|async|asynchronous|non-blocking|call stack|callback queue)\b/i, icon: "eventloop", label: "Async Event Loop", tag: "Non-Blocking I/O", tone: "active", layer: 3 },
+  { id: "tree", pattern: /\b(tree|b-tree|btree|binary search tree|ast|index)\b/i, icon: "tree", label: "B-Tree Index", tag: "O(log N)", tone: "active", layer: 3 },
+  { id: "callstack", pattern: /\b(call stack|stack frame|recursion|lifo|stack overflow)\b/i, icon: "stack", label: "Call Stack", tag: "LIFO Frame", tone: "active", layer: 3 },
+  { id: "gc", pattern: /\b(garbage collector|gc|garbage collection|memory leak|sweep)\b/i, icon: "gc", label: "Garbage Collector", tag: "Memory Reclamation", tone: "success", layer: 4 },
+  { id: "consensus", pattern: /\b(raft|paxos|consensus|quorum|leader election)\b/i, icon: "cluster", label: "Raft Consensus", tag: "Quorum", tone: "active", layer: 4 },
+  { id: "hash", pattern: /\b(hash map|hash table|bloom filter|bit array|hashing)\b/i, icon: "hash", label: "Hash Map / Filter", tag: "O(1) Access", tone: "active", layer: 5 },
 ];
 
 const ACRONYM_EXPANSIONS: Array<{

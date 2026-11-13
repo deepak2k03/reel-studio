@@ -351,6 +351,8 @@ def build_style_spec(
             "bodySize": 34,
             "codeSize": 25,
             "captionSize": 50,
+            "fontPreset": "editorial-sans",
+            "captionStyle": "pill" if palette["isDark"] else "bare",
         },
         "motion": {
             "springDamping": spring_damping,

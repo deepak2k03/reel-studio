@@ -42,10 +42,10 @@ export const BridgeArchitectureScene: React.FC<BridgeArchitectureSceneProps> = (
   const shareDefault = Math.min(6.0, sceneSpanSec * 0.52);
 
   const talkFrame = scene.talkCue
-    ? secToFrame(resolveCueTime(transcript, sceneStartSec + talkDefault, scene.talkCue), fps)
+    ? secToFrame(resolveCueTime(transcript, sceneStartSec + talkDefault, scene.talkCue, sceneStartSec), fps)
     : sceneStartFrame + secToFrame(talkDefault, fps);
   const shareFrame = scene.shareCue
-    ? secToFrame(resolveCueTime(transcript, sceneStartSec + shareDefault, scene.shareCue), fps)
+    ? secToFrame(resolveCueTime(transcript, sceneStartSec + shareDefault, scene.shareCue, sceneStartSec), fps)
     : sceneStartFrame + secToFrame(shareDefault, fps);
 
   const forwardCycle = (frame % 90) / 90;
@@ -112,7 +112,7 @@ export const BridgeArchitectureScene: React.FC<BridgeArchitectureSceneProps> = (
       <div
         style={{
           width: "100%",
-          maxWidth: 880,
+          maxWidth: 940,
           padding: "40px 30px",
           borderRadius: 32,
           backgroundColor: theme.colors.surface,
@@ -259,16 +259,33 @@ export const BridgeArchitectureScene: React.FC<BridgeArchitectureSceneProps> = (
             >
               <div
                 style={{
-                  width: 72,
-                  height: 72,
+                  width: 76,
+                  height: 76,
                   borderRadius: 20,
                   backgroundColor: `${color}20`,
+                  border: `1.5px solid ${active ? color : `${color}44`}`,
+                  boxShadow: active ? `0 0 20px ${color}44` : "none",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  position: "relative",
                 }}
               >
                 <TechIcon name={app.icon} size={38} color={color} />
+                {active && (
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 6,
+                      right: 6,
+                      width: 8,
+                      height: 8,
+                      borderRadius: "50%",
+                      backgroundColor: color,
+                      boxShadow: `0 0 8px ${color}`,
+                    }}
+                  />
+                )}
               </div>
               <div
                 style={{

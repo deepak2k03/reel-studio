@@ -8,6 +8,12 @@ import type {
   TranscriptData,
 } from "../../lib/types";
 import { TechIcon } from "../TechIcon";
+import {
+  AnimatedMobileClient,
+  AnimatedServerRack,
+  AnimatedDatabase,
+  AnimatedNetworkRouter,
+} from "../cs-objects";
 
 interface ClientApiServerSceneProps {
   scene: ClientApiServerSceneConfig;
@@ -45,16 +51,16 @@ export const ClientApiServerScene: React.FC<ClientApiServerSceneProps> = ({
   const screenDefault = Math.min(9.5, sceneSpanSec * 0.76);
 
   const reqFrame = scene.requestCue
-    ? secToFrame(resolveCueTime(transcript, sceneStartSec + reqDefault, scene.requestCue), fps)
+    ? secToFrame(resolveCueTime(transcript, sceneStartSec + reqDefault, scene.requestCue, sceneStartSec), fps)
     : sceneStartFrame + secToFrame(reqDefault, fps);
   const carryFrame = scene.carryCue
-    ? secToFrame(resolveCueTime(transcript, sceneStartSec + carryDefault, scene.carryCue), fps)
+    ? secToFrame(resolveCueTime(transcript, sceneStartSec + carryDefault, scene.carryCue, sceneStartSec), fps)
     : sceneStartFrame + secToFrame(carryDefault, fps);
   const dataFrame = scene.dataCue
-    ? secToFrame(resolveCueTime(transcript, sceneStartSec + dataDefault, scene.dataCue), fps)
+    ? secToFrame(resolveCueTime(transcript, sceneStartSec + dataDefault, scene.dataCue, sceneStartSec), fps)
     : sceneStartFrame + secToFrame(dataDefault, fps);
   const screenFrame = scene.screenCue
-    ? secToFrame(resolveCueTime(transcript, sceneStartSec + screenDefault, scene.screenCue), fps)
+    ? secToFrame(resolveCueTime(transcript, sceneStartSec + screenDefault, scene.screenCue, sceneStartSec), fps)
     : sceneStartFrame + secToFrame(screenDefault, fps);
 
   const reqActive = absFrame >= reqFrame && absFrame < dataFrame;
@@ -138,7 +144,7 @@ export const ClientApiServerScene: React.FC<ClientApiServerSceneProps> = ({
       <div
         style={{
           width: "100%",
-          maxWidth: 880,
+          maxWidth: 940,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -311,41 +317,58 @@ export const ClientApiServerScene: React.FC<ClientApiServerSceneProps> = ({
           </div>
         </div>
 
-        {/* 2. API CONTRACT GATEWAY */}
+        {/* 2. REAL ANIMATED API CONTRACT GATEWAY & ROUTER */}
         <div
           style={{
             width: "92%",
-            padding: "20px 26px",
+            padding: "14px 20px",
             borderRadius: 22,
-            backgroundColor: theme.colors.accent,
-            color: "#FFFFFF",
+            backgroundColor: isDark ? "rgba(15, 23, 42, 0.95)" : "#FAF6F0",
+            border: `2px solid ${theme.colors.accent}`,
             boxShadow: `0 16px 38px ${theme.colors.accentSoft}`,
             display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
+            flexDirection: "column",
+            gap: 8,
           }}
         >
-          <span
-            style={{
-              fontFamily: theme.typography.monoFont,
-              fontSize: 24,
-              fontWeight: 800,
-            }}
-          >
-            {scene.gatewayLabel ? `${scene.gatewayLabel} · ${scene.endpoint}` : `API · ${scene.endpoint}`}
-          </span>
-          <span
-            style={{
-              padding: "6px 14px",
-              borderRadius: 999,
-              backgroundColor: "rgba(255,255,255,0.22)",
-              fontFamily: theme.typography.monoFont,
-              fontSize: 18,
-              fontWeight: 800,
-            }}
-          >
-            {resActive ? "DATA READY" : reqActive ? "FORWARDING" : "GATEWAY"}
-          </span>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <span
+              style={{
+                fontFamily: theme.typography.monoFont,
+                fontSize: 22,
+                fontWeight: 800,
+                color: theme.colors.text,
+              }}
+            >
+              {scene.gatewayLabel ? `${scene.gatewayLabel} · ${scene.endpoint}` : `API GATEWAY · ${scene.endpoint}`}
+            </span>
+            <span
+              style={{
+                padding: "4px 12px",
+                borderRadius: 999,
+                backgroundColor: `${theme.colors.accent}24`,
+                fontFamily: theme.typography.monoFont,
+                fontSize: 16,
+                fontWeight: 800,
+                color: theme.colors.accent,
+                border: `1px solid ${theme.colors.accent}44`,
+              }}
+            >
+              {resActive ? "DATA READY" : reqActive ? "FORWARDING" : "STANDBY"}
+            </span>
+          </div>
+
+          {/* Micro-Chassis 10GbE Router Interface with Live Activity LEDs */}
+          <div style={{ height: 80, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+            <AnimatedNetworkRouter
+              theme={theme}
+              state={reqActive || resActive ? "active" : "idle"}
+              label=""
+              metric=""
+              scale={0.46}
+              portCount={8}
+            />
+          </div>
         </div>
 
         {/* Connector Lane 2 (API <-> Server) */}
@@ -420,11 +443,11 @@ export const ClientApiServerScene: React.FC<ClientApiServerSceneProps> = ({
           </div>
         </div>
 
-        {/* 3. SERVER RACK + LIVE JSON PAYLOAD */}
+        {/* 3. REAL ANIMATED SERVER RACK + DATABASE ASSEMBLY */}
         <div
           style={{
             width: "100%",
-            padding: "24px 28px",
+            padding: "20px 24px",
             borderRadius: 30,
             backgroundColor: theme.colors.surface,
             border: `2px solid ${resActive ? theme.colors.success : theme.colors.surfaceBorder}`,
@@ -433,36 +456,68 @@ export const ClientApiServerScene: React.FC<ClientApiServerSceneProps> = ({
               : "0 18px 46px rgba(45, 28, 12, 0.09)",
             display: "flex",
             flexDirection: "column",
-            gap: 16,
+            gap: 12,
           }}
         >
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-              <div
-                style={{
-                  width: 58,
-                  height: 58,
-                  borderRadius: 16,
-                  backgroundColor: `${theme.colors.success}20`,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Server size={30} color={theme.colors.success} />
-              </div>
-              <span
-                style={{
-                  fontFamily: theme.typography.displayFont,
-                  fontSize: 30,
-                  fontWeight: 800,
-                  color: theme.colors.text,
-                }}
-              >
-                {scene.serverLabel ?? "Server & Database"}
-              </span>
+            <span
+              style={{
+                fontFamily: theme.typography.displayFont,
+                fontSize: 28,
+                fontWeight: 800,
+                color: theme.colors.text,
+              }}
+            >
+              {scene.serverLabel ?? "Backend & Database Infrastructure"}
+            </span>
+            <span
+              style={{
+                fontFamily: theme.typography.monoFont,
+                fontSize: 14,
+                color: resActive ? theme.colors.success : theme.colors.muted,
+                background: resActive ? `${theme.colors.success}1A` : "rgba(255,255,255,0.05)",
+                padding: "3px 10px",
+                borderRadius: 999,
+                fontWeight: 700,
+              }}
+            >
+              {resActive ? "QUERY RESOLVED" : "BUFFERING"}
+            </span>
+          </div>
+
+          {/* Live Dual Hardware: Server Chassis + Disk Platters */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 12,
+              height: 125,
+              alignItems: "center",
+              overflow: "hidden",
+            }}
+          >
+            <div style={{ display: "flex", justifyContent: "center", height: "100%" }}>
+              <AnimatedServerRack
+                theme={theme}
+                state={resActive ? "busy" : reqActive ? "active" : "idle"}
+                label="Node Host"
+                sublabel="Compute"
+                units={1}
+                scale={0.44}
+                cpuLoad={resActive ? 86 : 28}
+              />
             </div>
-            <Database size={26} color={theme.colors.muted} />
+            <div style={{ display: "flex", justifyContent: "center", height: "100%" }}>
+              <AnimatedDatabase
+                theme={theme}
+                state={resActive ? "busy" : "idle"}
+                label="Storage"
+                sublabel="WAL Sync"
+                scale={0.42}
+                platterCount={2}
+                showBufferPool={false}
+              />
+            </div>
           </div>
 
           <pre

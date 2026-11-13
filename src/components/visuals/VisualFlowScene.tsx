@@ -3,6 +3,7 @@ import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } fr
 import { resolveCueTime, secToFrame } from "../../lib/timing";
 import type { StyleSpec, TranscriptData, VisualFlowSceneConfig } from "../../lib/types";
 import { TechIcon } from "../TechIcon";
+import { CsObject } from "../cs-objects";
 
 interface VisualFlowSceneProps {
   scene: VisualFlowSceneConfig;
@@ -207,8 +208,8 @@ export const VisualFlowScene: React.FC<VisualFlowSceneProps> = ({
               >
                 <div
                   style={{
-                    width: 90,
-                    height: 90,
+                    width: 96,
+                    height: 96,
                     borderRadius: 24,
                     backgroundColor: `${statusColor}22`,
                     border: `1.5px solid ${statusColor}66`,
@@ -216,16 +217,16 @@ export const VisualFlowScene: React.FC<VisualFlowSceneProps> = ({
                     alignItems: "center",
                     justifyContent: "center",
                     flexShrink: 0,
+                    overflow: "hidden",
                   }}
                 >
-                  <TechIcon
-                    name={node.icon}
-                    size={48}
-                    color={
-                      node.status === "neutral" || !node.status
-                        ? theme.colors.accent
-                        : statusColor
-                    }
+                  <CsObject
+                    type={node.icon ?? node.label}
+                    theme={theme}
+                    scale={0.24}
+                    label=""
+                    metric=""
+                    state={node.status === "warning" ? "error" : "active"}
                   />
                 </div>
 

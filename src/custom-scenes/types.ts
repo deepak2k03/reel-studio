@@ -32,4 +32,3 @@ export function resolveProjectMedia(
   }
   return staticFile(clean);
 }
-

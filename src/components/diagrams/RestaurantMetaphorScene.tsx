@@ -53,19 +53,19 @@ export const RestaurantMetaphorScene: React.FC<RestaurantMetaphorSceneProps> = (
   const foodReadyDefault = Math.min(7.5, sceneSpanSec * 0.76);
 
   const noDirectFrame = scene.noDirectCue
-    ? secToFrame(resolveCueTime(transcript, sceneStartSec + noDirectDefault, scene.noDirectCue), fps)
+    ? secToFrame(resolveCueTime(transcript, sceneStartSec + noDirectDefault, scene.noDirectCue, sceneStartSec), fps)
     : sceneStartFrame + secToFrame(noDirectDefault, fps);
   const waiterFrame = scene.waiterCue
-    ? secToFrame(resolveCueTime(transcript, sceneStartSec + waiterDefault, scene.waiterCue), fps)
+    ? secToFrame(resolveCueTime(transcript, sceneStartSec + waiterDefault, scene.waiterCue, sceneStartSec), fps)
     : sceneStartFrame + secToFrame(waiterDefault, fps);
   const takeOrderFrame = scene.takeOrderCue
-    ? secToFrame(resolveCueTime(transcript, sceneStartSec + takeOrderDefault, scene.takeOrderCue), fps)
+    ? secToFrame(resolveCueTime(transcript, sceneStartSec + takeOrderDefault, scene.takeOrderCue, sceneStartSec), fps)
     : sceneStartFrame + secToFrame(takeOrderDefault, fps);
   const chefTellFrame = scene.chefTellCue
-    ? secToFrame(resolveCueTime(transcript, sceneStartSec + chefTellDefault, scene.chefTellCue), fps)
+    ? secToFrame(resolveCueTime(transcript, sceneStartSec + chefTellDefault, scene.chefTellCue, sceneStartSec), fps)
     : sceneStartFrame + secToFrame(chefTellDefault, fps);
   const foodReadyFrame = scene.foodReadyCue
-    ? secToFrame(resolveCueTime(transcript, sceneStartSec + foodReadyDefault, scene.foodReadyCue), fps)
+    ? secToFrame(resolveCueTime(transcript, sceneStartSec + foodReadyDefault, scene.foodReadyCue, sceneStartSec), fps)
     : sceneStartFrame + secToFrame(foodReadyDefault, fps);
 
   const showBarrierWarning = absFrame >= noDirectFrame && absFrame < waiterFrame;

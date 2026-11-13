@@ -13,6 +13,7 @@ import path from "node:path";
 import { bundle } from "@remotion/bundler";
 import { renderMedia, renderStill, selectComposition } from "@remotion/renderer";
 import type { ProjectRecord } from "../server/types";
+import { resolveCueTime, secToFrame } from "../src/lib/timing";
 import type { StyleSpec, TimelineData, TranscriptData } from "../src/lib/types";
 
 const REPO_ROOT = path.resolve(__dirname, "..");
@@ -105,6 +106,67 @@ async function main() {
       id: "DynamicReel",
       inputProps,
     });
+
+    const qaSheetIdx = args.indexOf("--qa-sheet");
+    if (qaSheetIdx !== -1) {
+      const nextArg = args[qaSheetIdx + 1];
+      const sheetOut = path.resolve(
+        REPO_ROOT,
+        nextArg && !nextArg.startsWith("--") ? nextArg : `out/qa-${id}-sheet.png`,
+      );
+      const tmpDir = path.join(REPO_ROOT, "out", `.qa-tmp-${id}`);
+      fs.mkdirSync(tmpDir, { recursive: true });
+      fs.mkdirSync(path.dirname(sheetOut), { recursive: true });
+
+      const fps = timeline.fps || transcript.fps || 60;
+      const frames: number[] = [];
+      for (const sc of timeline.scenes) {
+        const scStart = resolveCueTime(transcript, sc.start, sc.cuePhrase);
+        const scEnd = Math.max(scStart + 0.5, sc.end);
+        const checkSec = scStart + (scEnd - scStart) * 0.62;
+        const frameNum = Math.min(
+          Math.max(1, composition.durationInFrames - 2),
+          secToFrame(checkSec, fps),
+        );
+        frames.push(frameNum);
+      }
+
+      try {
+        for (let i = 0; i < frames.length; i++) {
+          const shotPath = path.join(tmpDir, `shot_${String(i).padStart(2, "0")}.png`);
+          await renderStill({
+            composition,
+            serveUrl,
+            frame: frames[i],
+            output: shotPath,
+            inputProps,
+          });
+          console.log(`QA scene ${i + 1} (frame ${frames[i]}): ${timeline.scenes[i].id} [${timeline.scenes[i].type}]`);
+        }
+
+        const cols = Math.min(3, Math.max(1, frames.length));
+        const rows = Math.max(1, Math.ceil(frames.length / cols));
+        const ff = spawnSync(
+          "ffmpeg",
+          [
+            "-y",
+            "-i",
+            path.join(tmpDir, "shot_%02d.png"),
+            "-vf",
+            `scale=360:-1,tile=${cols}x${rows}:padding=12:margin=12:color=18181b`,
+            sheetOut,
+          ],
+          { cwd: REPO_ROOT, encoding: "utf-8" },
+        );
+        if (ff.status !== 0) {
+          throw new Error(ff.stderr || "ffmpeg tile command failed");
+        }
+        console.log(`Rendered QA contact sheet (${frames.length} scenes): ${sheetOut}`);
+      } finally {
+        fs.rmSync(tmpDir, { recursive: true, force: true });
+      }
+      return;
+    }
 
     const stillIdx = args.indexOf("--still");
     if (stillIdx !== -1) {

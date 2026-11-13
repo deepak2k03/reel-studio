@@ -3,6 +3,19 @@ import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } fr
 import { resolveCueTime, secToFrame } from "../../lib/timing";
 import type { SequenceDiagramSceneConfig, StyleSpec, TranscriptData } from "../../lib/types";
 import { TechIcon } from "../TechIcon";
+import { CsObject, type CsObjectType } from "../cs-objects";
+
+function resolveActorCsType(actor: { id: string; label: string; icon?: string }): CsObjectType {
+  const str = `${actor.id} ${actor.label} ${actor.icon ?? ""}`.toLowerCase();
+  if (str.includes("db") || str.includes("data") || str.includes("sql") || str.includes("postgres") || str.includes("redis")) return "database";
+  if (str.includes("phone") || str.includes("mobile") || str.includes("client") || str.includes("browser") || str.includes("user")) return "phone";
+  if (str.includes("queue") || str.includes("kafka") || str.includes("rabbit") || str.includes("broker")) return "queue";
+  if (str.includes("docker") || str.includes("container") || str.includes("pod") || str.includes("k8s")) return "container";
+  if (str.includes("router") || str.includes("gateway") || str.includes("proxy") || str.includes("balancer")) return "gateway";
+  if (str.includes("cpu") || str.includes("processor") || str.includes("silicon")) return "cpu";
+  if (str.includes("ram") || str.includes("cache") || str.includes("memory")) return "ram";
+  return "server";
+}
 
 interface SequenceDiagramSceneProps {
   scene: SequenceDiagramSceneConfig;
@@ -99,9 +112,10 @@ export const SequenceDiagramScene: React.FC<SequenceDiagramSceneProps> = ({
         style={{
           position: "relative",
           width: "100%",
-          maxWidth: 880,
-          height: 820,
-          padding: "32px 26px",
+          maxWidth: 940,
+          flex: 1,
+          maxHeight: 1320,
+          padding: "32px 28px",
           borderRadius: 32,
           backgroundColor: theme.colors.surface,
           border: `1.5px solid ${theme.colors.surfaceBorder}`,
@@ -113,7 +127,7 @@ export const SequenceDiagramScene: React.FC<SequenceDiagramSceneProps> = ({
           opacity: headerEnter,
         }}
       >
-        {/* Actor Header Row */}
+        {/* Actor Header Row with Real Animated Computer Science Objects */}
         <div
           style={{
             display: "grid",
@@ -129,32 +143,58 @@ export const SequenceDiagramScene: React.FC<SequenceDiagramSceneProps> = ({
                 : actor.tone === "danger"
                   ? theme.colors.danger
                   : theme.colors.accent;
+            const csType = resolveActorCsType(actor);
             return (
               <div
                 key={actor.id}
                 style={{
-                  padding: "16px 12px",
-                  borderRadius: 20,
-                  backgroundColor: isDark ? "rgba(255,255,255,0.04)" : "#FAF6F0",
-                  border: `2px solid ${color}77`,
+                  padding: "10px 8px 12px 8px",
+                  borderRadius: 22,
+                  backgroundColor: isDark ? "rgba(15, 23, 42, 0.85)" : "#FAF6F0",
+                  border: `2px solid ${color}88`,
+                  boxShadow: `0 8px 24px ${color}22`,
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  gap: 8,
+                  justifyContent: "center",
+                  overflow: "hidden",
                 }}
               >
-                <TechIcon name={actor.icon} size={34} color={color} />
-                <span
+                <div
                   style={{
-                    fontFamily: theme.typography.displayFont,
-                    fontSize: 23,
-                    fontWeight: 800,
-                    color: theme.colors.text,
-                    textAlign: "center",
+                    height: 104,
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    overflow: "hidden",
                   }}
                 >
-                  {actor.label}
-                </span>
+                  <CsObject
+                    type={csType}
+                    theme={theme}
+                    scale={actors.length > 2 ? 0.38 : 0.46}
+                    glow={true}
+                    label=""
+                    metric=""
+                    units={1}
+                  />
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 4 }}>
+                  <TechIcon name={actor.icon} size={20} color={color} />
+                  <span
+                    style={{
+                      fontFamily: theme.typography.displayFont,
+                      fontSize: 22,
+                      fontWeight: 800,
+                      color: theme.colors.text,
+                      textAlign: "center",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {actor.label}
+                  </span>
+                </div>
               </div>
             );
           })}
@@ -191,6 +231,7 @@ export const SequenceDiagramScene: React.FC<SequenceDiagramSceneProps> = ({
                     transcript,
                     sceneStartSec + (step.atOffset ?? defaultStepOffset),
                     step.cuePhrase,
+                    sceneStartSec,
                   ),
                   fps,
                 )

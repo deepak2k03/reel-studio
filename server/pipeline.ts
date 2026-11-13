@@ -19,9 +19,27 @@ const EXTRACT_STYLE_PY = path.join(REPO_ROOT, "scripts", "extract_style.py");
 const ENTRY_POINT = path.join(REPO_ROOT, "src", "index.ts");
 
 let cachedBundlePromise: Promise<string> | null = null;
+let cachedBundleMtime = 0;
+
+function getSrcMaxMtime(dir: string): number {
+  let max = 0;
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      const sub = getSrcMaxMtime(full);
+      if (sub > max) max = sub;
+    } else {
+      const m = fs.statSync(full).mtimeMs;
+      if (m > max) max = m;
+    }
+  }
+  return max;
+}
 
 function getBundleServeUrl(): Promise<string> {
-  if (!cachedBundlePromise) {
+  const latestMtime = getSrcMaxMtime(path.join(REPO_ROOT, "src"));
+  if (!cachedBundlePromise || latestMtime > cachedBundleMtime) {
+    cachedBundleMtime = latestMtime;
     cachedBundlePromise = bundle({
       entryPoint: ENTRY_POINT,
     }).catch((err) => {
@@ -60,7 +78,7 @@ function runPythonScript(
 
     const child = spawn(PYTHON_EXE, [scriptPath, ...args], {
       cwd: REPO_ROOT,
-      env: { ...process.env, HF_HUB_OFFLINE: "1" },
+      env: { ...process.env, HF_HUB_OFFLINE: "1", PYTHONUNBUFFERED: "1" },
       stdio: ["ignore", "pipe", "pipe"],
     });
     handle.childProcess = child;
