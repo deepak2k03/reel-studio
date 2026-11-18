@@ -129,6 +129,34 @@ select:focus {
   gap: 12px;
 }
 
+.music-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-2);
+}
+
+.music-toggle,
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.volume-control input { width: min(260px, 35vw); accent-color: var(--accent); }
+.music-toggle input { accent-color: var(--accent); }
+
+@media (max-width: 620px) {
+  .music-controls { align-items: flex-start; flex-direction: column; }
+}
+
 .dropzone {
   position: relative;
   border: 1.5px dashed var(--border);

@@ -7,6 +7,13 @@ const refZone = document.getElementById("ref-zone");
 const refInput = document.getElementById("ref-input");
 const refLabel = document.getElementById("ref-label");
 const refClear = document.getElementById("ref-clear");
+const musicZone = document.getElementById("music-zone");
+const musicInput = document.getElementById("music-input");
+const musicLabel = document.getElementById("music-label");
+const musicClear = document.getElementById("music-clear");
+const musicEnabled = document.getElementById("music-enabled");
+const musicVolume = document.getElementById("music-volume");
+const musicVolumeLabel = document.getElementById("music-volume-label");
 const themeWrap = document.getElementById("theme-wrap");
 const submitBtn = document.getElementById("submit-btn");
 const formError = document.getElementById("form-error");
@@ -45,6 +52,7 @@ syncSubmitLabel();
 
 let selectedVoice = null;
 let selectedReference = null;
+let selectedMusic = null;
 const confirmDeleteIds = new Set();
 
 function formatSize(bytes) {
@@ -125,11 +133,31 @@ function updateRefUI(file) {
   }
 }
 
+function updateMusicUI(file) {
+  selectedMusic = file;
+  musicZone.classList.toggle("has-file", Boolean(file));
+  musicLabel.textContent = file
+    ? `${file.name} (${formatSize(file.size)})`
+    : "Use the studio ambient bed, or choose your own track";
+  musicClear.classList.toggle("hidden", !file);
+  musicEnabled.disabled = false;
+  if (file) musicEnabled.checked = true;
+  musicInput.value = "";
+}
+
 bindDropzone(voiceZone, voiceInput, updateVoiceUI);
 bindDropzone(refZone, refInput, updateRefUI);
+bindDropzone(musicZone, musicInput, updateMusicUI);
 refClear.addEventListener("click", (e) => {
   e.stopPropagation();
   updateRefUI(null);
+});
+musicClear.addEventListener("click", (e) => {
+  e.stopPropagation();
+  updateMusicUI(null);
+});
+musicVolume.addEventListener("input", () => {
+  musicVolumeLabel.textContent = `${musicVolume.value}%`;
 });
 
 form.addEventListener("submit", async (e) => {
@@ -156,6 +184,9 @@ form.addEventListener("submit", async (e) => {
     if (selectedReference) {
       fd.append("reference", selectedReference);
     }
+    if (selectedMusic) fd.append("music", selectedMusic);
+    fd.append("musicEnabled", String(musicEnabled.checked));
+    fd.append("musicVolume", String(Number(musicVolume.value) / 100));
 
     const res = await fetch("/api/projects", { method: "POST", body: fd });
     const data = await res.json();
@@ -167,6 +198,10 @@ form.addEventListener("submit", async (e) => {
     voiceInput.value = "";
     updateVoiceUI(null);
     updateRefUI(null);
+    updateMusicUI(null);
+    musicEnabled.checked = true;
+    musicVolume.value = "4";
+    musicVolumeLabel.textContent = "4%";
   } catch (err) {
     formError.textContent = err.message || "Failed to start generation";
     formError.classList.remove("hidden");
