@@ -29,6 +29,8 @@ export interface ProjectRecord {
   format: "portrait" | "landscape";
   language: "auto" | "en" | "hi";
   hasReference: boolean;
+  hasMusic?: boolean;
+  musicVolume?: number;
   durationSec: number | null;
   styleColors: {
     bg: string;

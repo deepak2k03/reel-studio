@@ -58,6 +58,19 @@
               </div>
               <button type="button" class="clear-btn hidden" id="ref-clear">Clear</button>
             </div>
+            <div class="dropzone" id="music-zone">
+              <input id="music-input" name="music" type="file" accept="audio/*,.wav,.mp3,.m4a,.aac,.ogg,.flac" hidden />
+              <div class="drop-title">Background Music <span class="muted">(optional)</span></div>
+              <div class="drop-hint" id="music-label">Use the studio ambient bed, or choose your own track</div>
+              <button type="button" class="clear-btn hidden" id="music-clear">Clear</button>
+            </div>
+          </div>
+
+          <div class="music-controls">
+            <label class="music-toggle"><input id="music-enabled" type="checkbox" checked /> Enable background music</label>
+            <label class="volume-control" for="music-volume">Music volume <span id="music-volume-label">4%</span>
+              <input id="music-volume" type="range" min="0" max="100" value="4" />
+            </label>
           </div>
 
           <div class="controls-row">

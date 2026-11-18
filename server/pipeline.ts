@@ -54,6 +54,9 @@ export interface JobContext {
   projectDir: string;
   rawVoicePath: string;
   referenceVideoPath: string | null;
+  musicFileName: string | null;
+  musicEnabled: boolean;
+  musicVolume: number;
   fallbackThemeId: string;
   port: number;
 }
@@ -246,6 +249,12 @@ export async function runGenerationPipeline(
     audioUrl,
     format: project.format,
   });
+  timeline.ambientAudio = ctx.musicEnabled
+    ? {
+        ...(ctx.musicFileName ? { file: ctx.musicFileName } : {}),
+        volume: ctx.musicVolume,
+      }
+    : false;
   fs.writeFileSync(timelinePath, JSON.stringify(timeline, null, 2), "utf-8");
 
   if (handle.cancelled) throw new Error("Job cancelled");

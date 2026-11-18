@@ -278,15 +278,28 @@ app.post(
   upload.fields([
     { name: "voice", maxCount: 1 },
     { name: "reference", maxCount: 1 },
+    { name: "music", maxCount: 1 },
   ]),
   (req, res) => {
     const files = req.files as Record<string, Express.Multer.File[]> | undefined;
     const voiceFile = files?.voice?.[0];
     const refFile = files?.reference?.[0];
+    const musicFile = files?.music?.[0];
 
     if (!voiceFile) {
       if (refFile && fs.existsSync(refFile.path)) fs.unlinkSync(refFile.path);
+      if (musicFile && fs.existsSync(musicFile.path)) fs.unlinkSync(musicFile.path);
       res.status(400).json({ error: "Voice audio file is required." });
+      return;
+    }
+
+    const allowedMusicExts = new Set([".wav", ".mp3", ".m4a", ".aac", ".ogg", ".flac"]);
+    const musicExt = musicFile ? path.extname(musicFile.originalname).toLowerCase() : "";
+    if (musicFile && !allowedMusicExts.has(musicExt)) {
+      for (const file of [voiceFile, refFile, musicFile]) {
+        if (file && fs.existsSync(file.path)) fs.unlinkSync(file.path);
+      }
+      res.status(400).json({ error: "Background music must be an audio file (wav, mp3, m4a, aac, ogg, or flac)." });
       return;
     }
 
@@ -322,6 +335,17 @@ app.post(
       fs.renameSync(refFile.path, referenceVideoPath);
     }
 
+    let musicFileName: string | null = null;
+    if (musicFile) {
+      musicFileName = `music${musicExt}`;
+      fs.renameSync(musicFile.path, path.join(projectDir, musicFileName));
+    }
+    const musicEnabled = req.body?.musicEnabled !== "false";
+    const requestedVolume = Number(req.body?.musicVolume ?? 0.04);
+    const musicVolume = Number.isFinite(requestedVolume)
+      ? Math.min(1, Math.max(0, requestedVolume))
+      : 0.04;
+
     const record: ProjectRecord = {
       id,
       title,
@@ -334,6 +358,8 @@ app.post(
       format,
       language,
       hasReference: Boolean(referenceVideoPath),
+      hasMusic: Boolean(musicFileName),
+      musicVolume,
       durationSec: null,
       styleColors: null,
       styleMeta: null,
@@ -349,6 +375,9 @@ app.post(
         projectDir,
         rawVoicePath,
         referenceVideoPath,
+        musicFileName,
+        musicEnabled,
+        musicVolume,
         fallbackThemeId,
         port: PORT,
       },

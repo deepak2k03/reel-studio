@@ -228,6 +228,11 @@ export const TimelineReel: React.FC<TimelineReelProps> = ({
     rawAmbientFile.startsWith("sfx/") || rawAmbientFile.startsWith("/")
       ? rawAmbientFile
       : `sfx/${rawAmbientFile}`;
+  const ambientSrc = rawAmbientFile.startsWith("http://") || rawAmbientFile.startsWith("https://")
+    ? rawAmbientFile
+    : rawAmbientFile !== "sfx/ambient-warm.wav" && mediaBaseUrl
+      ? `${mediaBaseUrl.replace(/\/$/, "")}/${rawAmbientFile.replace(/^\//, "")}`
+      : staticFile(ambientFile);
   const ambientVolume =
     typeof timeline.ambientAudio === "object" && timeline.ambientAudio.volume !== undefined
       ? timeline.ambientAudio.volume
@@ -249,7 +254,7 @@ export const TimelineReel: React.FC<TimelineReelProps> = ({
       {/* Subtle studio ambient bed underneath voiceover */}
       {ambientEnabled && (
         <Loop durationInFrames={480}>
-          <Audio src={staticFile(ambientFile)} volume={ambientVolume} />
+          <Audio src={ambientSrc} volume={ambientVolume} />
         </Loop>
       )}
 
